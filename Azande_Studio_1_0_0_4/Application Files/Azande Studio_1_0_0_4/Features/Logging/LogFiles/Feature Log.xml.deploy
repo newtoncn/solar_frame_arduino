@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FeatureLogCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FeatureLogs>
+    <FeatureLog>
+      <SampleList>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:34.8545416+01:00</TimeStamp>
+          <Value>1.1080585718154907</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.0632794+01:00</TimeStamp>
+          <Value>1.108864426612854</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.2704299+01:00</TimeStamp>
+          <Value>1.1072527170181274</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.4774877+01:00</TimeStamp>
+          <Value>1.0983883142471314</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.6857644+01:00</TimeStamp>
+          <Value>1.1048351526260376</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.031999+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.0855367+01:00</TimeStamp>
+          <Value>1.0943589210510254</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.2698843+01:00</TimeStamp>
+          <Value>1.1016117334365845</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.4814429+01:00</TimeStamp>
+          <Value>1.1056410074234009</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.6891613+01:00</TimeStamp>
+          <Value>1.1048351526260376</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.8722173+01:00</TimeStamp>
+          <Value>1.1040292978286743</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.0804689+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.2884882+01:00</TimeStamp>
+          <Value>1.108864426612854</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.4972658+01:00</TimeStamp>
+          <Value>1.1072527170181274</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.76689+01:00</TimeStamp>
+          <Value>1.0935530662536621</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.8729653+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.0871415+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.2682204+01:00</TimeStamp>
+          <Value>1.1008058786392212</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.4763127+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.6824739+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.8896076+01:00</TimeStamp>
+          <Value>1.1040292978286743</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.0985198+01:00</TimeStamp>
+          <Value>1.0943589210510254</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.279512+01:00</TimeStamp>
+          <Value>1.0951647758483887</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.4880704+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.6972355+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.9054013+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.0865356+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.2970834+01:00</TimeStamp>
+          <Value>1.1040292978286743</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.4799949+01:00</TimeStamp>
+          <Value>1.1056410074234009</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.6903555+01:00</TimeStamp>
+          <Value>1.108864426612854</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.9016736+01:00</TimeStamp>
+          <Value>1.1080585718154907</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.1103875+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.2933663+01:00</TimeStamp>
+          <Value>1.0951647758483887</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.5026916+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.7080768+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.8905638+01:00</TimeStamp>
+          <Value>1.0935530662536621</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.0956604+01:00</TimeStamp>
+          <Value>1.0935530662536621</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.3029464+01:00</TimeStamp>
+          <Value>1.0951647758483887</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.5092862+01:00</TimeStamp>
+          <Value>1.0951647758483887</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.7150893+01:00</TimeStamp>
+          <Value>1.1072527170181274</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.897564+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.1034131+01:00</TimeStamp>
+          <Value>1.1104761362075806</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.3111389+01:00</TimeStamp>
+          <Value>1.0943589210510254</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.5185764+01:00</TimeStamp>
+          <Value>1.103223443031311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.6997842+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.9084193+01:00</TimeStamp>
+          <Value>1.1056410074234009</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.1158297+01:00</TimeStamp>
+          <Value>1.1000000238418579</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.3222704+01:00</TimeStamp>
+          <Value>1.0887179374694824</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.5056253+01:00</TimeStamp>
+          <Value>1.0935530662536621</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.713714+01:00</TimeStamp>
+          <Value>1.1072527170181274</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.9220465+01:00</TimeStamp>
+          <Value>1.1024175882339478</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.1302957+01:00</TimeStamp>
+          <Value>1.0935530662536621</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.3129896+01:00</TimeStamp>
+          <Value>1.1378754377365112</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.522562+01:00</TimeStamp>
+          <Value>1.7116483449935913</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.7297865+01:00</TimeStamp>
+          <Value>2.2620513439178467</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.9123297+01:00</TimeStamp>
+          <Value>2.5376555919647217</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.1194051+01:00</TimeStamp>
+          <Value>2.7479853630065918</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.3290563+01:00</TimeStamp>
+          <Value>2.9260807037353516</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.5382403+01:00</TimeStamp>
+          <Value>3.0018315315246582</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.7214064+01:00</TimeStamp>
+          <Value>2.5739192962646484</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.9304787+01:00</TimeStamp>
+          <Value>2.08959698677063</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.1381495+01:00</TimeStamp>
+          <Value>1.6592674255371094</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.3200871+01:00</TimeStamp>
+          <Value>2.2539925575256348</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.5294555+01:00</TimeStamp>
+          <Value>2.0235164165496826</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.7378287+01:00</TimeStamp>
+          <Value>2.4530403614044189</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.9203727+01:00</TimeStamp>
+          <Value>2.3450548648834229</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.1290981+01:00</TimeStamp>
+          <Value>2.5094504356384277</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.3385708+01:00</TimeStamp>
+          <Value>2.3031501770019531</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.5449125+01:00</TimeStamp>
+          <Value>2.4167766571044922</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.7276019+01:00</TimeStamp>
+          <Value>2.2475457191467285</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.936595+01:00</TimeStamp>
+          <Value>1.984835147857666</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.146977+01:00</TimeStamp>
+          <Value>1.5770696401596069</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.3310019+01:00</TimeStamp>
+          <Value>1.4964835643768311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.5394047+01:00</TimeStamp>
+          <Value>1.502124547958374</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.7466772+01:00</TimeStamp>
+          <Value>1.5037362575531006</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.9544739+01:00</TimeStamp>
+          <Value>1.4980952739715576</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.1386626+01:00</TimeStamp>
+          <Value>1.4997069835662842</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.3459306+01:00</TimeStamp>
+          <Value>1.4964835643768311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.5540066+01:00</TimeStamp>
+          <Value>1.5037362575531006</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.7357862+01:00</TimeStamp>
+          <Value>1.4964835643768311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.9439139+01:00</TimeStamp>
+          <Value>1.5053479671478272</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.1499867+01:00</TimeStamp>
+          <Value>1.4924541711807251</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.3584761+01:00</TimeStamp>
+          <Value>1.4964835643768311</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.540491+01:00</TimeStamp>
+          <Value>1.5061538219451904</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.7483107+01:00</TimeStamp>
+          <Value>1.502124547958374</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.9560036+01:00</TimeStamp>
+          <Value>1.4819780588150024</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.1639293+01:00</TimeStamp>
+          <Value>1.502124547958374</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.3460324+01:00</TimeStamp>
+          <Value>1.4956777095794678</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.5535028+01:00</TimeStamp>
+          <Value>1.5037362575531006</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.7610405+01:00</TimeStamp>
+          <Value>1.5037362575531006</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.9422011+01:00</TimeStamp>
+          <Value>1.5682051181793213</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.1511531+01:00</TimeStamp>
+          <Value>1.5972161293029785</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.3599639+01:00</TimeStamp>
+          <Value>1.8091574907302856</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.5704054+01:00</TimeStamp>
+          <Value>2.0630037784576416</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.7528362+01:00</TimeStamp>
+          <Value>2.2644689083099365</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.9593964+01:00</TimeStamp>
+          <Value>2.4876923561096191</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.1677769+01:00</TimeStamp>
+          <Value>2.739926815032959</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.3776338+01:00</TimeStamp>
+          <Value>3.0235898494720459</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.5589565+01:00</TimeStamp>
+          <Value>3.2605128288269043</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.7660168+01:00</TimeStamp>
+          <Value>3.2806594371795654</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.9759722+01:00</TimeStamp>
+          <Value>3.2991940975189209</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.1588344+01:00</TimeStamp>
+          <Value>3.2798535823822021</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.41747+01:00</TimeStamp>
+          <Value>3.080805778503418</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.5745023+01:00</TimeStamp>
+          <Value>2.7197802066802979</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.782703+01:00</TimeStamp>
+          <Value>2.3047618865966797</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.9647084+01:00</TimeStamp>
+          <Value>1.8929669857025147</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.1706302+01:00</TimeStamp>
+          <Value>1.3788278102874756</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.3785526+01:00</TimeStamp>
+          <Value>1.0315018892288208</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.5865029+01:00</TimeStamp>
+          <Value>1.0395604372024536</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.7671954+01:00</TimeStamp>
+          <Value>1.0347253084182739</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.9765235+01:00</TimeStamp>
+          <Value>1.0339194536209106</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.1848635+01:00</TimeStamp>
+          <Value>1.025054931640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.3926508+01:00</TimeStamp>
+          <Value>1.0355311632156372</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.5743044+01:00</TimeStamp>
+          <Value>1.0290842056274414</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.7812525+01:00</TimeStamp>
+          <Value>1.0266666412353516</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.9915019+01:00</TimeStamp>
+          <Value>1.0339194536209106</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.1725438+01:00</TimeStamp>
+          <Value>1.0290842056274414</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.3799723+01:00</TimeStamp>
+          <Value>1.0226373672485352</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.5881964+01:00</TimeStamp>
+          <Value>1.0419780015945435</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.7966152+01:00</TimeStamp>
+          <Value>1.0427838563919067</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.9795538+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.1859596+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.3948156+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.6012493+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.7839634+01:00</TimeStamp>
+          <Value>1.0226373672485352</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.9916013+01:00</TimeStamp>
+          <Value>1.0323077440261841</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.6854105+01:00</TimeStamp>
+          <Value>1.0355311632156372</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.8105056+01:00</TimeStamp>
+          <Value>1.0411721467971802</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.8911389+01:00</TimeStamp>
+          <Value>1.030695915222168</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.9922947+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.1290448+01:00</TimeStamp>
+          <Value>1.030695915222168</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.2083032+01:00</TimeStamp>
+          <Value>1.0387545824050903</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.3917369+01:00</TimeStamp>
+          <Value>1.0387545824050903</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.5987138+01:00</TimeStamp>
+          <Value>1.0339194536209106</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.8049423+01:00</TimeStamp>
+          <Value>1.0355311632156372</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.0129213+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.1959347+01:00</TimeStamp>
+          <Value>1.0355311632156372</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.4045184+01:00</TimeStamp>
+          <Value>1.0274724960327148</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.6142752+01:00</TimeStamp>
+          <Value>1.0226373672485352</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.7980246+01:00</TimeStamp>
+          <Value>1.0290842056274414</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.0146867+01:00</TimeStamp>
+          <Value>1.0282783508300781</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.198402+01:00</TimeStamp>
+          <Value>1.0395604372024536</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.4070626+01:00</TimeStamp>
+          <Value>1.0282783508300781</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.6148787+01:00</TimeStamp>
+          <Value>1.0339194536209106</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.7989561+01:00</TimeStamp>
+          <Value>1.0298900604248047</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.008136+01:00</TimeStamp>
+          <Value>1.025054931640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.2183542+01:00</TimeStamp>
+          <Value>1.030695915222168</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.4003173+01:00</TimeStamp>
+          <Value>1.0347253084182739</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.6084085+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.8161067+01:00</TimeStamp>
+          <Value>1.0266666412353516</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.0241223+01:00</TimeStamp>
+          <Value>1.0339194536209106</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.2076369+01:00</TimeStamp>
+          <Value>1.0290842056274414</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.4142886+01:00</TimeStamp>
+          <Value>1.0258607864379883</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.6226758+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.8473554+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.0300157+01:00</TimeStamp>
+          <Value>1.0290842056274414</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.2377619+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.4194225+01:00</TimeStamp>
+          <Value>1.0379487276077271</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.625676+01:00</TimeStamp>
+          <Value>1.0331135988235474</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.8356306+01:00</TimeStamp>
+          <Value>1.0395604372024536</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:07.0184793+01:00</TimeStamp>
+          <Value>1.0355311632156372</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:07.2255724+01:00</TimeStamp>
+          <Value>1.0347253084182739</Value>
+        </SamplePoint>
+      </SampleList>
+      <Name>Volt 3 decimals (12, 0)(ZSAB02)</Name>
+      <SerialDeviceName>ZSAB02</SerialDeviceName>
+    </FeatureLog>
+    <FeatureLog>
+      <SampleList>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:34.2982699+01:00</TimeStamp>
+          <Value>1095.164794921875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:34.4852006+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:34.6939105+01:00</TimeStamp>
+          <Value>1107.252685546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:34.8809656+01:00</TimeStamp>
+          <Value>1108.05859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.0897038+01:00</TimeStamp>
+          <Value>1108.8643798828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.2971618+01:00</TimeStamp>
+          <Value>1107.252685546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.5042315+01:00</TimeStamp>
+          <Value>1098.3883056640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:35.7126774+01:00</TimeStamp>
+          <Value>1104.835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.0530137+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.1125572+01:00</TimeStamp>
+          <Value>1094.35888671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.2974045+01:00</TimeStamp>
+          <Value>1101.6116943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.5079622+01:00</TimeStamp>
+          <Value>1105.6409912109375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.7166904+01:00</TimeStamp>
+          <Value>1104.835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:36.8940087+01:00</TimeStamp>
+          <Value>1104.029296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.10712+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.3103129+01:00</TimeStamp>
+          <Value>1108.8643798828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.5235962+01:00</TimeStamp>
+          <Value>1107.252685546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.7934092+01:00</TimeStamp>
+          <Value>1093.5531005859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:37.9063891+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.1129013+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.2941874+01:00</TimeStamp>
+          <Value>1100.805908203125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.5028316+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.7078382+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:38.9163005+01:00</TimeStamp>
+          <Value>1104.029296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.1246942+01:00</TimeStamp>
+          <Value>1094.35888671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.3054684+01:00</TimeStamp>
+          <Value>1095.164794921875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.5150909+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.7236619+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:39.9310904+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.114107+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.3186162+01:00</TimeStamp>
+          <Value>1104.029296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.5066316+01:00</TimeStamp>
+          <Value>1105.6409912109375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.7173732+01:00</TimeStamp>
+          <Value>1108.8643798828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:40.9283755+01:00</TimeStamp>
+          <Value>1108.05859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.1367228+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.3148572+01:00</TimeStamp>
+          <Value>1095.164794921875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.5283692+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.7337495+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:41.9168515+01:00</TimeStamp>
+          <Value>1093.5531005859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.1214961+01:00</TimeStamp>
+          <Value>1093.5531005859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.3239857+01:00</TimeStamp>
+          <Value>1095.164794921875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.5350525+01:00</TimeStamp>
+          <Value>1095.164794921875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.7413409+01:00</TimeStamp>
+          <Value>1107.252685546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:42.9233742+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.1302054+01:00</TimeStamp>
+          <Value>1110.4761962890625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.3330111+01:00</TimeStamp>
+          <Value>1094.35888671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.5449684+01:00</TimeStamp>
+          <Value>1103.223388671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.7263613+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:43.9356262+01:00</TimeStamp>
+          <Value>1105.6409912109375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.142757+01:00</TimeStamp>
+          <Value>1100</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.343951+01:00</TimeStamp>
+          <Value>1088.7178955078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.5324069+01:00</TimeStamp>
+          <Value>1093.5531005859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.7397525+01:00</TimeStamp>
+          <Value>1107.252685546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:44.9487632+01:00</TimeStamp>
+          <Value>1102.4176025390625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.1578881+01:00</TimeStamp>
+          <Value>1093.5531005859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.3354522+01:00</TimeStamp>
+          <Value>1137.87548828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.5492479+01:00</TimeStamp>
+          <Value>1711.6483154296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.7570053+01:00</TimeStamp>
+          <Value>2262.05126953125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:45.9386149+01:00</TimeStamp>
+          <Value>2537.655517578125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.146663+01:00</TimeStamp>
+          <Value>2747.9853515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.3506568+01:00</TimeStamp>
+          <Value>2926.080810546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.5651907+01:00</TimeStamp>
+          <Value>3001.83154296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.7489257+01:00</TimeStamp>
+          <Value>2573.919189453125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:46.9569729+01:00</TimeStamp>
+          <Value>2089.596923828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.1651453+01:00</TimeStamp>
+          <Value>1659.2674560546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.3418908+01:00</TimeStamp>
+          <Value>2253.99267578125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.5562539+01:00</TimeStamp>
+          <Value>2023.516357421875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.7649641+01:00</TimeStamp>
+          <Value>2453.040283203125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:47.9474556+01:00</TimeStamp>
+          <Value>2345.054931640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.1561593+01:00</TimeStamp>
+          <Value>2509.450439453125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.3648281+01:00</TimeStamp>
+          <Value>2303.150146484375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.5722976+01:00</TimeStamp>
+          <Value>2416.776611328125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.7549057+01:00</TimeStamp>
+          <Value>2247.545654296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:48.9633298+01:00</TimeStamp>
+          <Value>1984.835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.1745275+01:00</TimeStamp>
+          <Value>1577.069580078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.3526155+01:00</TimeStamp>
+          <Value>1496.4835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.5656176+01:00</TimeStamp>
+          <Value>1502.12451171875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.7729258+01:00</TimeStamp>
+          <Value>1503.7362060546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:49.9816541+01:00</TimeStamp>
+          <Value>1498.09521484375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.1654253+01:00</TimeStamp>
+          <Value>1499.70703125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.3718213+01:00</TimeStamp>
+          <Value>1496.4835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.5810862+01:00</TimeStamp>
+          <Value>1503.7362060546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.7627468+01:00</TimeStamp>
+          <Value>1496.4835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:50.9700574+01:00</TimeStamp>
+          <Value>1505.3480224609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.1762161+01:00</TimeStamp>
+          <Value>1492.4542236328125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.3851037+01:00</TimeStamp>
+          <Value>1496.4835205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.5668267+01:00</TimeStamp>
+          <Value>1506.15380859375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.7752668+01:00</TimeStamp>
+          <Value>1502.12451171875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:51.9829782+01:00</TimeStamp>
+          <Value>1481.97802734375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.1912294+01:00</TimeStamp>
+          <Value>1502.12451171875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.3724889+01:00</TimeStamp>
+          <Value>1495.677734375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.5799962+01:00</TimeStamp>
+          <Value>1503.7362060546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.7867892+01:00</TimeStamp>
+          <Value>1503.7362060546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:52.9690615+01:00</TimeStamp>
+          <Value>1568.205078125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.1779269+01:00</TimeStamp>
+          <Value>1597.2161865234375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.3865891+01:00</TimeStamp>
+          <Value>1809.157470703125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.5972539+01:00</TimeStamp>
+          <Value>2063.003662109375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.7795447+01:00</TimeStamp>
+          <Value>2264.468994140625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:53.9874638+01:00</TimeStamp>
+          <Value>2487.6923828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.194857+01:00</TimeStamp>
+          <Value>2739.9267578125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.4039667+01:00</TimeStamp>
+          <Value>3023.58984375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.5860136+01:00</TimeStamp>
+          <Value>3260.512939453125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:54.7927524+01:00</TimeStamp>
+          <Value>3280.659423828125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.0021999+01:00</TimeStamp>
+          <Value>3299.194091796875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.1848294+01:00</TimeStamp>
+          <Value>3279.853515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.4441181+01:00</TimeStamp>
+          <Value>3080.8056640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.6015967+01:00</TimeStamp>
+          <Value>2719.7802734375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.8089776+01:00</TimeStamp>
+          <Value>2304.761962890625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:55.9904521+01:00</TimeStamp>
+          <Value>1892.967041015625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.197395+01:00</TimeStamp>
+          <Value>1378.8277587890625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.4048198+01:00</TimeStamp>
+          <Value>1031.5018310546875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.6133284+01:00</TimeStamp>
+          <Value>1039.5604248046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:56.7935977+01:00</TimeStamp>
+          <Value>1034.725341796875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.0028359+01:00</TimeStamp>
+          <Value>1033.91943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.2110539+01:00</TimeStamp>
+          <Value>1025.054931640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.4193285+01:00</TimeStamp>
+          <Value>1035.5311279296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.6012674+01:00</TimeStamp>
+          <Value>1029.084228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:57.8084241+01:00</TimeStamp>
+          <Value>1026.6666259765625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.0177301+01:00</TimeStamp>
+          <Value>1033.91943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.199061+01:00</TimeStamp>
+          <Value>1029.084228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.4015765+01:00</TimeStamp>
+          <Value>1022.6373901367188</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.6149193+01:00</TimeStamp>
+          <Value>1041.97802734375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:58.8228561+01:00</TimeStamp>
+          <Value>1042.7838134765625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.0060981+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.2131686+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.4208976+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.6270863+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:51:59.810591+01:00</TimeStamp>
+          <Value>1022.6373901367188</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.0179464+01:00</TimeStamp>
+          <Value>1032.3077392578125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.708716+01:00</TimeStamp>
+          <Value>1035.5311279296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.8365437+01:00</TimeStamp>
+          <Value>1041.172119140625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.9184477+01:00</TimeStamp>
+          <Value>1030.6959228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:00.9997999+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.1559503+01:00</TimeStamp>
+          <Value>1030.6959228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.2360073+01:00</TimeStamp>
+          <Value>1038.754638671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.4183239+01:00</TimeStamp>
+          <Value>1038.754638671875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.6251013+01:00</TimeStamp>
+          <Value>1033.91943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:01.8315211+01:00</TimeStamp>
+          <Value>1035.5311279296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.0400827+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.2223381+01:00</TimeStamp>
+          <Value>1035.5311279296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.4321548+01:00</TimeStamp>
+          <Value>1027.4725341796875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.6414139+01:00</TimeStamp>
+          <Value>1022.6373901367188</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:02.8241698+01:00</TimeStamp>
+          <Value>1029.084228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.0419843+01:00</TimeStamp>
+          <Value>1028.2783203125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.2252604+01:00</TimeStamp>
+          <Value>1039.5604248046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.433971+01:00</TimeStamp>
+          <Value>1028.2783203125</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.6421036+01:00</TimeStamp>
+          <Value>1033.91943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:03.8264771+01:00</TimeStamp>
+          <Value>1029.8900146484375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.0351512+01:00</TimeStamp>
+          <Value>1025.054931640625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.2446374+01:00</TimeStamp>
+          <Value>1030.6959228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.4216497+01:00</TimeStamp>
+          <Value>1034.725341796875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.6354877+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:04.8426144+01:00</TimeStamp>
+          <Value>1026.6666259765625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.0511412+01:00</TimeStamp>
+          <Value>1033.91943359375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.2342645+01:00</TimeStamp>
+          <Value>1029.084228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.4354305+01:00</TimeStamp>
+          <Value>1025.86083984375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.649764+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:05.8683274+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.0560135+01:00</TimeStamp>
+          <Value>1029.084228515625</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.26478+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.4448279+01:00</TimeStamp>
+          <Value>1037.94873046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.6523049+01:00</TimeStamp>
+          <Value>1033.1136474609375</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:06.863636+01:00</TimeStamp>
+          <Value>1039.5604248046875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:07.0447424+01:00</TimeStamp>
+          <Value>1035.5311279296875</Value>
+        </SamplePoint>
+        <SamplePoint xsi:type="FeatureSampleDouble">
+          <TimeStamp>2016-11-19T17:52:07.2526414+01:00</TimeStamp>
+          <Value>1034.725341796875</Value>
+        </SamplePoint>
+      </SampleList>
+      <Name>Milli Volt  (12, 1)(ZSAB02)</Name>
+      <SerialDeviceName>ZSAB02</SerialDeviceName>
+    </FeatureLog>
+  </FeatureLogs>
+</FeatureLogCollection>
