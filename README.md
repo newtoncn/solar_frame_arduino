@@ -1,6 +1,10 @@
 # Arduino Interface for Solar Frame Actuation System
 
-[TOC]
+## Table of Contents
+- [User Manual](#user-manual)
+  - [Setup Arduino Environment](#setup-arduino-environment)
+  - [Install Azande](#install-azande)
+  - [Connect Azande to Arduino](#connect-azande-to-arduino)
 
 ## User Manual
 
