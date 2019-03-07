@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="AzandeStudio.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+            <section name="Azande.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+    <userSettings>
+        <AzandeStudio.Properties.Settings>
+            <setting name="GroupColor_0" serializeAs="String">
+                <value>78, 192, 239</value>
+            </setting>
+            <setting name="GroupColor_1" serializeAs="String">
+                <value>243, 146, 0</value>
+            </setting>
+            <setting name="GroupColor_2" serializeAs="String">
+                <value>0, 101, 176</value>
+            </setting>
+            <setting name="GroupColor_3" serializeAs="String">
+                <value>255, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_4" serializeAs="String">
+                <value>255, 224, 192</value>
+            </setting>
+            <setting name="GroupColor_5" serializeAs="String">
+                <value>255, 255, 192</value>
+            </setting>
+            <setting name="GroupColor_6" serializeAs="String">
+                <value>192, 255, 192</value>
+            </setting>
+            <setting name="GroupColor_7" serializeAs="String">
+                <value>192, 255, 255</value>
+            </setting>
+            <setting name="GroupColor_8" serializeAs="String">
+                <value>192, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_9" serializeAs="String">
+                <value>255, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_10" serializeAs="String">
+                <value>255, 13, 13</value>
+            </setting>
+            <setting name="GroupColor_11" serializeAs="String">
+                <value>13, 255, 13</value>
+            </setting>
+            <setting name="GroupColor_12" serializeAs="String">
+                <value>62, 62, 255</value>
+            </setting>
+            <setting name="GroupColor_13" serializeAs="String">
+                <value>128, 255, 128</value>
+            </setting>
+            <setting name="GroupColor_14" serializeAs="String">
+                <value>128, 255, 255</value>
+            </setting>
+            <setting name="GroupColor_15" serializeAs="String">
+                <value>128, 128, 255</value>
+            </setting>
+            <setting name="GroupColor_16" serializeAs="String">
+                <value>255, 128, 255</value>
+            </setting>
+            <setting name="GroupColor_17" serializeAs="String">
+                <value>255, 128, 0</value>
+            </setting>
+            <setting name="GroupColor_18" serializeAs="String">
+                <value>Yellow</value>
+            </setting>
+            <setting name="GroupColor_19" serializeAs="String">
+                <value>Lime</value>
+            </setting>
+            <setting name="GroupColor_20" serializeAs="String">
+                <value>Aqua</value>
+            </setting>
+            <setting name="DashBoard_BackColor_Run" serializeAs="String">
+                <value>Silver</value>
+            </setting>
+            <setting name="DashBoard_BackColor_Edit" serializeAs="String">
+                <value>Fuchsia</value>
+            </setting>
+            <setting name="Feature_Font" serializeAs="String">
+                <value>Microsoft Sans Serif, 12pt</value>
+            </setting>
+            <setting name="Feature_Font_Color" serializeAs="String">
+                <value>Black</value>
+            </setting>
+            <setting name="Feature_2_Row_Size" serializeAs="String">
+                <value>200, 90</value>
+            </setting>
+            <setting name="Feature_Gauge_Size" serializeAs="String">
+                <value>200, 250</value>
+            </setting>
+            <setting name="Feature_3_Row_Size" serializeAs="String">
+                <value>200, 115</value>
+            </setting>
+            <setting name="Feature_CmdInt32_Type" serializeAs="String">
+                <value>Numerical Up/Down</value>
+            </setting>
+            <setting name="Feature_1_Row_Size" serializeAs="String">
+                <value>200, 50</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Name" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="SerialDevice_ComPort_Baudrate" serializeAs="String">
+                <value>19200</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_StopBits" serializeAs="String">
+                <value>One</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_DataBits" serializeAs="String">
+                <value>8</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Handshake" serializeAs="String">
+                <value>None</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Parity" serializeAs="String">
+                <value>None</value>
+            </setting>
+            <setting name="Feature_Command_Enum_Type" serializeAs="String">
+                <value>BUTTONS</value>
+            </setting>
+            <setting name="SocketServer_PortNumber" serializeAs="String">
+                <value>41414</value>
+            </setting>
+            <setting name="SocketServer_ClientHeartbeat" serializeAs="String">
+                <value>5000</value>
+            </setting>
+        </AzandeStudio.Properties.Settings>
+        <Azande.Properties.Settings>
+            <setting name="GroupColor_0" serializeAs="String">
+                <value>78, 192, 239</value>
+            </setting>
+            <setting name="GroupColor_1" serializeAs="String">
+                <value>243, 146, 0</value>
+            </setting>
+            <setting name="GroupColor_2" serializeAs="String">
+                <value>0, 101, 176</value>
+            </setting>
+            <setting name="GroupColor_3" serializeAs="String">
+                <value>255, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_4" serializeAs="String">
+                <value>255, 224, 192</value>
+            </setting>
+            <setting name="GroupColor_5" serializeAs="String">
+                <value>255, 255, 192</value>
+            </setting>
+            <setting name="GroupColor_6" serializeAs="String">
+                <value>192, 255, 192</value>
+            </setting>
+            <setting name="GroupColor_7" serializeAs="String">
+                <value>192, 255, 255</value>
+            </setting>
+            <setting name="GroupColor_8" serializeAs="String">
+                <value>192, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_9" serializeAs="String">
+                <value>255, 192, 255</value>
+            </setting>
+            <setting name="GroupColor_10" serializeAs="String">
+                <value>255, 128, 128</value>
+            </setting>
+            <setting name="GroupColor_11" serializeAs="String">
+                <value>255, 192, 128</value>
+            </setting>
+            <setting name="GroupColor_12" serializeAs="String">
+                <value>255, 255, 128</value>
+            </setting>
+            <setting name="GroupColor_13" serializeAs="String">
+                <value>128, 255, 128</value>
+            </setting>
+            <setting name="GroupColor_14" serializeAs="String">
+                <value>128, 255, 255</value>
+            </setting>
+            <setting name="GroupColor_15" serializeAs="String">
+                <value>128, 128, 255</value>
+            </setting>
+            <setting name="GroupColor_16" serializeAs="String">
+                <value>255, 128, 255</value>
+            </setting>
+            <setting name="GroupColor_17" serializeAs="String">
+                <value>255, 128, 0</value>
+            </setting>
+            <setting name="GroupColor_18" serializeAs="String">
+                <value>Yellow</value>
+            </setting>
+            <setting name="GroupColor_19" serializeAs="String">
+                <value>Lime</value>
+            </setting>
+            <setting name="GroupColor_20" serializeAs="String">
+                <value>Aqua</value>
+            </setting>
+            <setting name="DashBoard_BackColor_Run" serializeAs="String">
+                <value>Silver</value>
+            </setting>
+            <setting name="DashBoard_BackColor_Edit" serializeAs="String">
+                <value>Fuchsia</value>
+            </setting>
+            <setting name="Feature_Font" serializeAs="String">
+                <value>Microsoft Sans Serif, 12pt</value>
+            </setting>
+            <setting name="Feature_Font_Color" serializeAs="String">
+                <value>Black</value>
+            </setting>
+            <setting name="Feature_2_Row_Size" serializeAs="String">
+                <value>200, 90</value>
+            </setting>
+            <setting name="Feature_Gauge_Size" serializeAs="String">
+                <value>200, 250</value>
+            </setting>
+            <setting name="Feature_3_Row_Size" serializeAs="String">
+                <value>200, 115</value>
+            </setting>
+            <setting name="Feature_CmdInt32_Type" serializeAs="String">
+                <value>Numerical Up/Down</value>
+            </setting>
+            <setting name="Feature_1_Row_Size" serializeAs="String">
+                <value>200, 50</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Name" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="SerialDevice_ComPort_Baudrate" serializeAs="String">
+                <value>19200</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_StopBits" serializeAs="String">
+                <value>One</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_DataBits" serializeAs="String">
+                <value>8</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Handshake" serializeAs="String">
+                <value>None</value>
+            </setting>
+            <setting name="SerialDevice_ComPort_Parity" serializeAs="String">
+                <value>None</value>
+            </setting>
+            <setting name="Feature_Command_Enum_Type" serializeAs="String">
+                <value>BUTTONS</value>
+            </setting>
+            <setting name="SocketServer_PortNumber" serializeAs="String">
+                <value>41414</value>
+            </setting>
+        </Azande.Properties.Settings>
+    </userSettings>
+</configuration>
