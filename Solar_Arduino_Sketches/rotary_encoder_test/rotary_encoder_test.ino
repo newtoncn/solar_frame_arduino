@@ -4,17 +4,18 @@ int pin0 = 2;
 int pin1 = 3;
 int pin2 = 4;
 int pin3 = 5;
+int val0=0,val1=0,val2=0,val3=0;
 byte total[4];
+int num=0;
 int counter = 0;
-int current_total = 0;
-int prev_total = -1;
+int current_gray = 0;
+int prev_gray = -1;
 
 void setup() {
   pinMode(pin0, INPUT);
   pinMode(pin1, INPUT);
   pinMode(pin2, INPUT);
   pinMode(pin3, INPUT);
-
 
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -27,33 +28,38 @@ void setup() {
 }
 
 void loop() {
-  total[0] = digitalRead(pin0);
-  total[1] = digitalRead(pin1);
-  total[2] = digitalRead(pin2);
-  total[3] = digitalRead(pin3);
+  val0 = digitalRead(pin0);
+  val1 = digitalRead(pin1);
+  val2 = digitalRead(pin2);
+  val3 = digitalRead(pin3);
 
-  Serial.print("Val 0 is "); Serial.println(total[0]);
-  Serial.print("Val 1 is "); Serial.println(total[1]);
-  Serial.print("Val 2 is "); Serial.println(total[2]);
-  Serial.print("Val 3 is "); Serial.println(total[3]);
+  Serial.print("Val 0 is "); Serial.println(val0);
+  Serial.print("Val 1 is "); Serial.println(val1);
+  Serial.print("Val 2 is "); Serial.println(val2);
+  Serial.print("Val 3 is "); Serial.println(val3);
 
-  if(prev_total == -1) prev_total = GrayToBinary32(total);
-  else current_total = GrayToBinary32(total);
+  num = val0+val1*2+val2*4+val3*8;
 
-  if(prev_total > current_total) counter++;
-  else if(prev_total < current_total) counter--;
+  if(prev_gray == -1) prev_gray = GrayToBinary16(num);
+  else current_gray = GrayToBinary16(num);
 
-  Serial.print("Total is "); Serial.println((int)total);
+  if(prev_gray > current_gray) counter++;
+  else if(prev_gray < current_gray) counter--;
 
+  Serial.print("num is "); Serial.println(num);
 
-  Serial.print("Current Total is "); Serial.println(current_total);
+  Serial.print("current_total is "); Serial.println(current_gray);
+
+  Serial.print("prev_gray is "); Serial.println(prev_gray);
 
   Serial.print("Counter is "); Serial.println(counter);
+
+  prev_gray = current_gray;
 
   delay(200);
 }
 
-unsigned int GrayToBinary32(unsigned int num)
+unsigned int GrayToBinary16(unsigned int num)
 {
     num = num ^ (num >> 16);
     num = num ^ (num >> 8);
