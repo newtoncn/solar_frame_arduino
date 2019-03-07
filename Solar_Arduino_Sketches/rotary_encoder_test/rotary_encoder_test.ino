@@ -5,7 +5,6 @@ int pin1 = 3;
 int pin2 = 4;
 int pin3 = 5;
 int val0=0,val1=0,val2=0,val3=0;
-byte total[4];
 int num=0;
 int counter = 0;
 int current_gray = 0;
