@@ -1,5 +1,12 @@
 #include <Azande.h>
-#include "cs_interface.h"
+#include "sensors.h"
+#include "motors.h"
+
+// Pin Declarations
+
+// Sensors
+
+// Motors
 
 void setup() {
   // put your setup code here, to run once:
