@@ -1,23 +1,28 @@
 #include <Azande.h>
-#include "sensors.h"
 #include "motors.h"
+#include "sensors.h"
 
 // Pin Declarations
-int relay_enable = 2;
-int rotary_pin0 = 3;
-int rotary_pin1 = 4;
-int rotary_pin2 = 5;
-int rotary_pin3 = 6;
-int megamoto_enable = 8;
-int motor_controller_A = 9;
-int motor_controller_B = 10;
+int re_pin0 = 2;
+int re_pin1 = 3;
+int re_pin2 = 4;
+int re_pin3 = 5;
+
+int Megamoto_EnablePin = 8;
+int PWMPinA = 9;           
+int PWMPinB = 10;         
+
+int currentSensorAPin = A5;
+int currentSensorBPin = A0;
 
 // Sensors
-Rotary_Encoder rotary_encoder = Rotary_Encoder(rotary_pin0,rotary_pin1,rotary_pin2,rotary_pin3);
-
+Rotary_Encoder rotary_encoder = Rotary_Encoder(re_pin0,re_pin1,re_pin2,re_pin3);
 Sensor_Container sensor_container = Sensor_Container();
+Current_Sensor current_sensor_A = Current_Sensor(currentSensorAPin);
+Current_Sensor current_sensor_B = Current_Sensor(currentSensorBPin);
 
 // Motors
+LINEAR_ACTUATOR altidutinal_actuator = LINEAR_ACTUATOR(Megamoto_EnablePin, PWMPinA, PWMPinB);
 
 //Azande
 Azande azande(Serial);    // The Azande object variable. Using 'Serial' as 'Stream'
@@ -25,15 +30,16 @@ Azande azande(Serial);    // The Azande object variable. Using 'Serial' as 'Stre
 define_int_event(rotaryPosition, "Azimuth Position", 0 , "degrees" , , , );
 
 void setup() {
-  //Set pin modes
-  pinMode(rotary_pin0, INPUT);
-  pinMode(rotary_pin1, INPUT);
-  pinMode(rotary_pin2, INPUT);
-  pinMode(rotary_pin3, INPUT);
-
-  // put your setup code here, to run once:
   Serial.begin(9600);
-
+  // Set pin modes
+  pinMode(re_pin0, INPUT);
+  pinMode(re_pin1, INPUT);
+  pinMode(re_pin2, INPUT);
+  pinMode(re_pin3, INPUT);
+  pinMode(Megamoto_EnablePin, OUTPUT);    // Enable Megamoto
+  pinMode(PWMPinA, OUTPUT);
+  pinMode(PWMPinB, OUTPUT);               // Set motor outputs
+  
   while (!Serial) {
     delay(1); // will pause Zero, Leonardo, etc until serial console opens
   }
@@ -53,4 +59,5 @@ void loop() {
   azande.send(rotaryPosition,rotary_encoder.getCurrentAngle());
   
   delay(200);
+
 }
