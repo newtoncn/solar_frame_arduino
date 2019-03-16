@@ -44,9 +44,12 @@ double Rotary_Encoder::getCurrentAngle()
 // Class Current_Sensor
 double Current_Sensor::getCurrent() 
 {
-  int integerZeroTo1023 = analogRead(pinNum_);   // analogRead reads int value of 0-1023, represent 0 to 5V.
-  double currentValue = integerZeroTo1023*convertIntToVolts*convertVoltsToAmps; // //Current sense output: I = Vc/0.075, where Vc ranges 0 to 2.99V.
-  return currentValue;     
+  return analogReading_*convertIntToVolts*convertVoltsToAmps; // //Current sense output: I = Vc/0.075, where Vc ranges 0 to 2.99V.
+}
+
+void Current_Sensor::run()
+{
+  analogReading_ = analogRead(pinNum_);   // analogRead reads int value of 0-1023, represent 0 to 5V.
 }
 
 

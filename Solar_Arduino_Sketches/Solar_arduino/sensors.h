@@ -30,6 +30,7 @@ class Current_Sensor : public Sensor{
     int pinNum_;
     double convertVoltsToAmps = 0.075; //Current sense output: I*0.075 = Vc, where Vc ranges 0 to 2.99V.
     double convertIntToVolts = 5.0/1023.0; // analogRead reads 0 to 5V, as from 0 to 1023
+    int analogReading_;
 };
 
 class IMU_Sensor : Sensor{
