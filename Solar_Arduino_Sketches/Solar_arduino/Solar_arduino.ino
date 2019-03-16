@@ -8,13 +8,7 @@ int re_pin1 = 3;
 int re_pin2 = 4;
 int re_pin3 = 5;
 
-// Sensors
-Rotary_Encoder rotary_encoder = Rotary_Encoder(re_pin0,re_pin1,re_pin2,re_pin3);
-
-Sensor_Container sensor_container = Sensor_Container();
-
 // Motors
-=======
 int Megamoto_EnablePin = 8;
 int PWMPinA = 9;           
 int PWMPinB = 10;         
@@ -35,7 +29,6 @@ Azande azande(Serial);    // The Azande object variable. Using 'Serial' as 'Stre
 
 void setup() {
   //Set pin modes
-=======
   Serial.begin(9600);
   // Set pin modes
   pinMode(re_pin0, INPUT);
@@ -62,7 +55,5 @@ void setup() {
 void loop() {
   sensor_container.run();
 
-  Serial.print("Counter "); Serial.println(rotary_encoder.getCurrentAngle());
-  
   delay(200);
 }
