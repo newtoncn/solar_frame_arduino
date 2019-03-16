@@ -1,5 +1,6 @@
 #include "sensors.h"
 
+//  Class Rotary_Encoder 
 unsigned int Rotary_Encoder::GrayToBinary32(unsigned int num)
 {
   num = num ^ (num >> 16);
@@ -39,6 +40,17 @@ double Rotary_Encoder::getCurrentAngle()
   return counter_; //counter_ * (360 / 16) * (1.0 / GEAR_RATIO);
 }
 
+
+// Class Current_Sensor
+double Current_Sensor::getCurrent() 
+{
+  int integerZeroTo1023 = analogRead(pinNum_);   // analogRead reads int value of 0-1023, represent 0 to 5V.
+  double currentValue = integerZeroTo1023*convertIntToVolts*convertVoltsToAmps; // //Current sense output: I = Vc/0.075, where Vc ranges 0 to 2.99V.
+  return currentValue;     
+}
+
+
+//  Class Sensor_Container
 Sensor_Container::Sensor_Container() {
   sensor_num_ = 0;
 }
