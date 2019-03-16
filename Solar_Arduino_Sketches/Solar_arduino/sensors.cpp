@@ -52,6 +52,34 @@ void Current_Sensor::run()
   analogReading_ = analogRead(pinNum_);   // analogRead reads int value of 0-1023, represent 0 to 5V.
 }
 
+//Class IMU Sensor
+void IMU_Sensor::run(){
+  lsm.read();  /* ask it to read in the data */
+
+  /* Get a new sensor event */
+  sensors_event_t a, m, g, temp;
+
+  lsm.getEvent(&a, &m, &g, &temp);
+
+  a_accel_x_ = a.acceleration.x;
+  a_accel_y_ = a.acceleration.y;
+  a_accel_z_ = a.acceleration.z;
+
+  m_guass_x_ = m.magnetic.x; 
+  m_guass_y_ = m.magnetic.y;
+
+  
+}
+
+double IMU_Sensor::getPitch(){
+  return atan2(-a_accel_x_, sqrt(a_accel_y_*a_accel_y_ + a_accel_z_*(a_accel_z_))) * 180/M_PI;
+}
+
+
+double IMU_Sensor::getHeading(){
+  return atan2(m_guass_x_, m_guass_y_) * 180/M_PI;
+}
+
 
 //  Class Sensor_Container
 Sensor_Container::Sensor_Container() {

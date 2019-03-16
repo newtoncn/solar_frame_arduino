@@ -1,7 +1,24 @@
+#include <FirmataMarshaller.h>
+#include <FirmataConstants.h>
+#include <Boards.h>
+#include <FirmataDefines.h>
+#include <FirmataParser.h>
+#include <Firmata.h>
+#include <Arduino.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <Adafruit_LSM9DS1.h>
+#include <Adafruit_Sensor.h>  // not used in this demo but required!
+
+
 #ifndef SENSORS_H
 #define SENSORS_H
 
-#include <Arduino.h>
+#define LSM9DS1_SCK A5
+#define LSM9DS1_MISO 12
+#define LSM9DS1_MOSI A4
+#define LSM9DS1_XGCS 6
+#define LSM9DS1_MCS 5
 
 #define NUM_SENSORS 2
 #define GEAR_RATIO 60
@@ -18,11 +35,11 @@ class Sensor{
 };
 
 
-class Current_Sensor : public Sensor{
+class Current_Sensor : public Sensor {
   public: 
     Current_Sensor(int pinNum) : Sensor(){
       pinNum_ = pinNum;
-      };
+      }
     virtual void run();
     double getCurrent();
     
@@ -33,15 +50,31 @@ class Current_Sensor : public Sensor{
     int analogReading_;
 };
 
-class IMU_Sensor : Sensor{
+/*
+ * IMU Sensor Class
+ */
+class IMU_Sensor : public Sensor{
   public:
-  IMU_Sensor() : Sensor(){}
+  IMU_Sensor() : Sensor(){
+    lsm = Adafruit_LSM9DS1();
+    
+    lsm.setupAccel(lsm.LSM9DS1_ACCELRANGE_2G);
+    lsm.setupMag(lsm.LSM9DS1_MAGGAIN_4GAUSS);
+    lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_245DPS);
+   }
 
   virtual void run();
   double getPitch();
   double getHeading();
+
+  private:
+  double a_accel_x_, a_accel_y_, a_accel_z_, m_guass_x_, m_guass_y_;
+  Adafruit_LSM9DS1 lsm;
 };
 
+/*
+ * Rotary Encoder Sensor class
+ */
 class Rotary_Encoder : public Sensor {
   public:
     Rotary_Encoder(int pin0, int pin1, int pin2, int pin3) : Sensor(){
@@ -72,7 +105,7 @@ class Sensor_Container{
    */
     Sensor_Container();
     void addSensor(Sensor& sensor);
-    void run();
+    virtual void run();
     
   private:
     int sensor_num_;

@@ -1,6 +1,6 @@
 #include <Azande.h>
-#include "sensors.h"
 #include "motors.h"
+#include "sensors.h"
 
 // Pin Declarations
 int re_pin0 = 2;
@@ -17,11 +17,12 @@ int currentSensorAPin = A5;
 int currentSensorBPin = A0;
 
 // Sensors
-Rotary_Encoder rotary_encoder = Rotary_Encoder(re_pin0, re_pin1, re_pin2, re_pin3);
+Rotary_Encoder rotary_encoder = Rotary_Encoder(re_pin0,re_pin1,re_pin2,re_pin3);
+IMU_Sensor imu_sensor = IMU_Sensor();
+Current_Sensor current_sensor_A = Current_Sensor(currentSensorAPin);
+Current_Sensor current_sensor_B = Current_Sensor(currentSensorBPin);
 
 Sensor_Container sensor_container = Sensor_Container();
-Current_Sensor current_sensor_A = Current_Sensor(currentSensorAPin);  //DOES NOT WORK
-Current_Sensor current_sensor_B = Current_Sensor(currentSensorBPin);  //DOES NOT WORK
 
 // Motors
 LINEAR_ACTUATOR altidutinal_actuator = LINEAR_ACTUATOR(Megamoto_EnablePin, PWMPinA, PWMPinB);
@@ -30,6 +31,10 @@ LINEAR_ACTUATOR altidutinal_actuator = LINEAR_ACTUATOR(Megamoto_EnablePin, PWMPi
 Azande azande(Serial);    // The Azande object variable. Using 'Serial' as 'Stream'
 
 define_int_event(rotaryPosition,
+"Azimuth Position", 0, "degrees", , , );
+define_double_event(pitchPosition,
+"Azimuth Position", 0, "degrees", , , );
+define_double_event(headingPosition,
 "Azimuth Position", 0, "degrees", , , );
 
 void setup() {
@@ -42,9 +47,7 @@ void setup() {
     pinMode(PWMPinA, OUTPUT);
     pinMode(PWMPinB, OUTPUT);               // Set motor outputs
 
-    // put your setup code here, to run once:
-    Serial.begin(9600);
-
+    Serial.begin(9600); //May need to adjust Serial values for Azande Interface and IMU sensor
 
     while (!Serial) {
         delay(1); // will pause Zero, Leonardo, etc until serial console opens
@@ -55,14 +58,19 @@ void setup() {
     azande.begin();
 
     azande.add(rotaryPosition);
+    azande.add(pitchPosition);
+    azande.add(headingPosition);
 
     sensor_container.addSensor(rotary_encoder);
+    sensor_container.addSensor(imu_sensor);
 }
 
 void loop() {
     sensor_container.run();
 
     azande.send(rotaryPosition, rotary_encoder.getCurrentAngle());
+    azande.send(pitchPosition, imu_sensor.getPitch());
+    azande.send(headingPosition, imu_sensor.getHeading());
 
-    delay(200);
+    delay(200); //Test Different Delays for Azande interface
 }
