@@ -24,7 +24,7 @@ LINEAR_ACTUATOR::~LINEAR_ACTUATOR()
 void LINEAR_ACTUATOR::stopActuator() {
   analogWrite(pin_PWM_A, speed_stop);
   analogWrite(pin_PWM_B, speed_stop);
-  digitalWrite(pin_enable, LOW); 
+  digitalWrite(pin_enable, LOW);
 }
 
 void LINEAR_ACTUATOR::forwardActuator() {
