@@ -1,6 +1,6 @@
 #include <Azande.h>
-#include "motors.h"
 #include "sensors.h"
+#include "motors.h"
 
 // Pin Declarations
 int re_pin0 = 2;
@@ -8,7 +8,6 @@ int re_pin1 = 3;
 int re_pin2 = 4;
 int re_pin3 = 5;
 
-// Motors
 int Megamoto_EnablePin = 8;
 int PWMPinA = 9;
 int PWMPinB = 10;
