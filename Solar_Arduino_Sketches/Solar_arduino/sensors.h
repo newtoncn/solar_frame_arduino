@@ -1,9 +1,3 @@
-#include <FirmataMarshaller.h>
-#include <FirmataConstants.h>
-#include <Boards.h>
-#include <FirmataDefines.h>
-#include <FirmataParser.h>
-#include <Firmata.h>
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -20,7 +14,6 @@
 #define LSM9DS1_XGCS 6
 #define LSM9DS1_MCS 5
 
-#define NUM_SENSORS 2
 #define GEAR_RATIO 60
 
 /*
@@ -83,7 +76,7 @@ class Rotary_Encoder : public Sensor {
         pin2_ = pin2;
         pin3_ = pin3;
         prev_gray_ = -1;
-       current_gray_ = 0;
+        current_gray_ = 0;
    }
     virtual void run();
     void startTracking();
@@ -109,7 +102,7 @@ class Sensor_Container{
     
   private:
     int sensor_num_;
-    Sensor* sensors_[NUM_SENSORS];    // An array of pointers to sensor objects
+    Sensor* sensors_[10];    // An array of pointers to sensor objects
 };
 
 #endif

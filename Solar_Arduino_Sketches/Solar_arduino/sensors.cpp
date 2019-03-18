@@ -83,14 +83,18 @@ double IMU_Sensor::getHeading(){
 
 //  Class Sensor_Container
 Sensor_Container::Sensor_Container() {
-  sensor_num_ = 0;
+  sensor_num_ = 1;
 }
 
 void Sensor_Container::addSensor(Sensor& sensor) {
-  sensors_[sensor_num_] = &sensor;
+  sensors_[sensor_num_-1] = &sensor;
   sensor_num_++;
 }
 
 void Sensor_Container::run() {
-  for (int a = 0; a < (int)sizeof(sensors_)/sizeof(Sensor*); a++) sensors_[a]->run();
+  for (int a = 0; a < sensor_num_; a++){
+      if(sensors_[a] != NULL){
+          sensors_[a]->run();
+      }
+  }
 }
