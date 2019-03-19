@@ -37,7 +37,7 @@ void Rotary_Encoder::startTracking()
 
 double Rotary_Encoder::getCurrentAngle()
 {
-  return counter_; //counter_ * (360 / 16) * (1.0 / GEAR_RATIO);
+  return counter_ * (360 / 16) * (1.0 / GEAR_RATIO);
 }
 
 
@@ -53,7 +53,8 @@ void Current_Sensor::run()
 }
 
 //Class IMU Sensor
-void IMU_Sensor::run(){
+void IMU_Sensor::run()
+{
   lsm.read();  /* ask it to read in the data */
 
   /* Get a new sensor event */
@@ -67,30 +68,37 @@ void IMU_Sensor::run(){
 
   m_guass_x_ = m.magnetic.x; 
   m_guass_y_ = m.magnetic.y;
-
-  
 }
 
-double IMU_Sensor::getPitch(){
+double IMU_Sensor::getPitch()
+{
   return atan2(-a_accel_x_, sqrt(a_accel_y_*a_accel_y_ + a_accel_z_*(a_accel_z_))) * 180/M_PI;
 }
 
 
-double IMU_Sensor::getHeading(){
+double IMU_Sensor::getHeading()
+{
   return atan2(m_guass_x_, m_guass_y_) * 180/M_PI;
 }
 
 
 //  Class Sensor_Container
-Sensor_Container::Sensor_Container() {
-  sensor_num_ = 0;
+Sensor_Container::Sensor_Container() 
+{
+  sensor_num_ = 1;
 }
 
-void Sensor_Container::addSensor(Sensor& sensor) {
-  sensors_[sensor_num_] = &sensor;
+void Sensor_Container::addSensor(Sensor& sensor) 
+{
+  sensors_[sensor_num_ - 1] = &sensor;
   sensor_num_++;
 }
 
-void Sensor_Container::run() {
-  for (int a = 0; a < (int)sizeof(sensors_)/sizeof(Sensor*); a++) sensors_[a]->run();
+void Sensor_Container::run() 
+{
+  for (int a = 0; a < sensor_num_; a++){
+      if(sensors_[a] != NULL){
+          sensors_[a]->run();
+      }
+  }
 }

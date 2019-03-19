@@ -1,9 +1,3 @@
-#include <FirmataMarshaller.h>
-#include <FirmataConstants.h>
-#include <Boards.h>
-#include <FirmataDefines.h>
-#include <FirmataParser.h>
-#include <Firmata.h>
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -20,7 +14,6 @@
 #define LSM9DS1_XGCS 6
 #define LSM9DS1_MCS 5
 
-#define NUM_SENSORS 2
 #define GEAR_RATIO 60
 
 /*
@@ -34,7 +27,9 @@ class Sensor{
   virtual void run()=0; // "run(" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
 };
 
-
+/*
+ * Current Sensor Class
+ */
 class Current_Sensor : public Sensor {
   public: 
     Current_Sensor(int pinNum) : Sensor(){
@@ -45,9 +40,9 @@ class Current_Sensor : public Sensor {
     
   private:
     int pinNum_;
-    double convertVoltsToAmps = 0.075; //Current sense output: I*0.075 = Vc, where Vc ranges 0 to 2.99V.
-    double convertIntToVolts = 5.0/1023.0; // analogRead reads 0 to 5V, as from 0 to 1023
-    int analogReading_;
+    float convertVoltsToAmps = 0.075; //Current sense output: I*0.075 = Vc, where Vc ranges 0 to 2.99V.
+    float convertIntToVolts = 5.0/1023.0; // analogRead reads 0 to 5V, as from 0 to 1023
+    float analogReading_;
 };
 
 /*
@@ -109,7 +104,7 @@ class Sensor_Container{
     
   private:
     int sensor_num_;
-    Sensor* sensors_[NUM_SENSORS];    // An array of pointers to sensor objects
+    Sensor* sensors_[10];    // An array of pointers to sensor objects
 };
 
 #endif
