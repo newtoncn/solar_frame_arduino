@@ -6,12 +6,13 @@
 #define MOTORS_H
 
 #include <Arduino.h>
+#include <Azande.h>
+#include "sensors.h"
 
-
-class ACTUATOR {
+class Actuator {
   public:
-    ACTUATOR(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting);
-    ~ACTUATOR();
+    Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting);
+    ~Actuator();
     void forwardActuator();   // Moves actuator forward.
     void reverseActuator();   // Moves actuator backward.
     void stopActuator();      // Stops actuator.
@@ -24,9 +25,5 @@ class ACTUATOR {
     int rampUpTime;
 };
 
-/* 
-class AZIMUTH_MOTOR {
-
-}; */
 
 #endif

@@ -7,7 +7,7 @@
 
 // Class LINEAR_ACTUATOR. Has 3 functions: move fwd, backwd, and stop.
 // Constructor
-ACTUATOR::ACTUATOR(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting)
+Actuator::Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting)
 {
   pin_enable = Megamoto_EnablePin;
   pin_PWM_A = PWMPinA;
@@ -18,17 +18,17 @@ ACTUATOR::ACTUATOR(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speed
 }
 
 // Destructor
-ACTUATOR::~ACTUATOR()
+Actuator::~Actuator()
 {
 }
 
-void ACTUATOR::stopActuator() {
+void Actuator::stopActuator() {
   analogWrite(pin_PWM_A, speed_stop);
   analogWrite(pin_PWM_B, speed_stop);
   digitalWrite(pin_enable, LOW);
 }
 
-void ACTUATOR::forwardActuator() {
+void Actuator::forwardActuator() {
   digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_A, speed_stop);
   // Ramp up time to get to full speed
@@ -38,7 +38,7 @@ void ACTUATOR::forwardActuator() {
   }
 }
 
-void ACTUATOR::reverseActuator() {
+void Actuator::reverseActuator() {
   digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_B, speed_stop);
     // Ramp up time to get to full speed
@@ -47,3 +47,4 @@ void ACTUATOR::reverseActuator() {
     delay(125);
   }
 }
+

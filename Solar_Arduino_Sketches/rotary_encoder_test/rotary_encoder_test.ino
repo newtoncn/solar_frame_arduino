@@ -1,9 +1,9 @@
 #include <math.h>
 
-int pin0 = 2;
-int pin1 = 3;
-int pin2 = 4;
-int pin3 = 5;
+int pin0 = 3;
+int pin1 = 4;
+int pin2 = 5;
+int pin3 = 6;
 int val0=0,val1=0,val2=0,val3=0;
 int num=0;
 int counter = 0;
@@ -55,7 +55,7 @@ void loop() {
 
   prev_gray = current_gray;
 
-  delay(200);
+  delay(20);
 }
 
 unsigned int GrayToBinary16(unsigned int num)

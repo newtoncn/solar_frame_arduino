@@ -21,10 +21,10 @@ define_double_command( cmdSetAltitudinalAngle,   "Set Altitudinalal Angle", SetA
 Azande azande;
 
 // Pin Declarations
-int re_pin0 = 2;
-int re_pin1 = 3;
-int re_pin2 = 4;
-int re_pin3 = 5;
+int re_pin0 = 3;
+int re_pin1 = 4;
+int re_pin2 = 5;
+int re_pin3 = 6;
 
 int Megamoto_EnablePin = 8;
 int PWMPinA = 9;
@@ -45,8 +45,8 @@ Current_Sensor current_sensor_B = Current_Sensor(currentSensorBPin);
 // Values from 0-255, range of motor speed from 0-100%
 float azimuthal_speed = 255; 
 float altitudinal_speed = 255; 
-ACTUATOR altidutinal_actuator = ACTUATOR(Megamoto_EnablePin, PWMPinA, PWMPinB, altitudinal_speed);
-ACTUATOR azimuthal_actuator = ACTUATOR(Megamoto_EnablePin, PWMPinA, PWMPinB, azimuthal_speed);
+Actuator altidutinal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, altitudinal_speed);
+Actuator azimuthal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, azimuthal_speed);
 
 
 void setup() {
@@ -111,7 +111,7 @@ void SetAzAngle(double azAngleRequest){
 
   // ...until at target bearing
   while( abs(rotary_encoder.getCurrentAngle() - azAngleRequest) > 1 ){
-//    sensor_container.run();
+    sensor_container.run();
     GiveAzPosition();
     delay(100);
   }
@@ -124,7 +124,7 @@ void SetAzAngle(double azAngleRequest){
  * Assumes 0 degrees is tubes are flat front plane: ___ , 90 degrees is all tubes vertical:  |
  */
 void SetAltAngle(double altAngleRequest){
-//  sensor_container.run();
+  sensor_container.run();
   
   if( altAngleRequest < 59 ) // 59 is placeholder for imu_sensor.getPitch()
   {
@@ -134,7 +134,7 @@ void SetAltAngle(double altAngleRequest){
   }
 
   while( abs(0.59 - altAngleRequest) > 1 ){  // 0.59 is placeholder for imu_sensor.getPitch()
-//    sensor_container.run();
+    sensor_container.run();
     GivePitchPosition();
     delay(100);
   }
@@ -146,7 +146,7 @@ void SetAltAngle(double altAngleRequest){
 // This function is called when receiving the command "Give sensor read for:", (cmdGiveReading), from Azande Studio
 void GiveReading(long enumValue)
 { 
-//  sensor_container.run();
+  sensor_container.run();
   switch (enumValue)
   {
     case 0: // readAz
