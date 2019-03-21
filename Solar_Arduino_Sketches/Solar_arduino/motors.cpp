@@ -1,17 +1,19 @@
 /*
-  motors.h - Library for linear actuator code.
-*/
+ * motors.cpp - Implements motors.h, library for 
+ * altitudinal and azimuthal actuators' code.
+ */
+ 
 #include "motors.h"
-
 #include <Arduino.h>
 
-// Class LINEAR_ACTUATOR. Has 3 functions: move fwd, backwd, and stop.
 // Constructor
-Actuator::Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting)
+Actuator::Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting, int relayPin, int relaySetting)
 {
   pin_enable = Megamoto_EnablePin;
   pin_PWM_A = PWMPinA;
   pin_PWM_B = PWMPinB;
+  relayPin_ = relayPin;
+  relaySetting_ = relaySetting;
   speed_actuate = speedSetting;
   speed_stop = 0;
   rampUpTime = 125; // Motor goes from 0 to full speed in 4 * rampUpTime milliseconds
@@ -22,13 +24,28 @@ Actuator::~Actuator()
 {
 }
 
+/*
+ * Stop actuator from actuating.
+ * 
+ * requires: nothing.
+ * effects:  sets speed of actuator to 0. 
+ */
 void Actuator::stopActuator() {
+  digitalWrite(relayPin_, relaySetting_);
   analogWrite(pin_PWM_A, speed_stop);
   analogWrite(pin_PWM_B, speed_stop);
   digitalWrite(pin_enable, LOW);
 }
 
+/*
+ * Makes actuator actuate forward.
+ * 
+ * requires: nothing.
+ * effects:  sets speed of actuator to speed selected by 
+ * initialized motor speed variable in Solar_arduino tab.
+ */
 void Actuator::forwardActuator() {
+  digitalWrite(relayPin_, relaySetting_);
   digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_A, speed_stop);
   // Ramp up time to get to full speed
@@ -38,7 +55,16 @@ void Actuator::forwardActuator() {
   }
 }
 
+/*
+ * Makes actuator actuate backward.
+ * 
+ * requires: nothing.
+ * effects:  sets speed of actuator to speed selected by 
+ * initialized motor speed variable in Solar_arduino tab.
+ */
 void Actuator::reverseActuator() {
+  digitalWrite(relayPin_, relaySetting_);
+  digitalWrite(pin_enable, HIGH);
   digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_B, speed_stop);
     // Ramp up time to get to full speed
