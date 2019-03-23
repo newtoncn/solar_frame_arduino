@@ -98,21 +98,40 @@ void Current_Sensor::run()
  * effects:  a_accel_x_,  a_accel_y_, a_accel_z_, m_guass_x_, m_guass_y_  
  * updates IMU sensor readings
  */
+
 void IMU_Sensor::run()
 {
-  //lsm.read();  /* ask it to read in the data */
+  lsm.read();  // ask it to read in the data 
 
-  /* Get a new sensor event */
+  // Get a new sensor event 
   sensors_event_t a, m, g, temp;
 
-  //lsm.getEvent(&a, &m, &g, &temp);
+  lsm.getEvent(&a, &m, &g, &temp);
 
   a_accel_x_ = a.acceleration.x;
   a_accel_y_ = a.acceleration.y;
   a_accel_z_ = a.acceleration.z;
 
-  m_guass_x_ = m.magnetic.x; 
-  m_guass_y_ = m.magnetic.y;
+  m_gauss_x_ = m.magnetic.x; 
+  m_gauss_y_ = m.magnetic.y;
+}
+
+/*
+ * requires: nothing
+ * effects:  performs required setup of IMU sensor object using functions in Adafruit library
+ */
+void IMU_Sensor::setupIMU()
+{
+      //Try to initialise and warn if we couldn't detect the chip
+   if (!lsm.begin()) {
+      Serial.println("Oops ... unable to initialize the LSM9DS1. Check your wiring!");
+      while (1);
+   }
+    
+    //Serial.println("Found LSM9DS1 9DOF");
+    lsm.setupAccel(lsm.LSM9DS1_ACCELRANGE_2G);
+    lsm.setupMag(lsm.LSM9DS1_MAGGAIN_4GAUSS);
+    lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_245DPS);
 }
 
 /*
@@ -121,7 +140,7 @@ void IMU_Sensor::run()
  */
 double IMU_Sensor::getPitch()
 {
-  return 2.0; //atan2(-a_accel_x_, sqrt(a_accel_y_*a_accel_y_ + a_accel_z_*(a_accel_z_))) * 180/M_PI;
+  return atan2(-a_accel_x_, sqrt(a_accel_y_*a_accel_y_ + a_accel_z_*(a_accel_z_))) * 180/M_PI;
 }
 
 /*
@@ -130,7 +149,7 @@ double IMU_Sensor::getPitch()
  */
 double IMU_Sensor::getHeading()
 {
-  return 2.0; //atan2(m_guass_y_, m_guass_x_) * 180/M_PI;
+  return atan2(m_gauss_y_, m_gauss_x_) * 180/M_PI;
 }
 
 // Sensor_Container class

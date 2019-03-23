@@ -59,6 +59,7 @@ void SetAltAngle(double altAngleRequest){
   } else {
      azimuthal_actuator.reverseActuator();  // Linear actuator retracts until at target bearing.
   }
+  
 
   while( abs(imu_sensor.getPitch() - altAngleRequest) > 1 ){ 
     sensor_container.run();

@@ -55,18 +55,15 @@ class IMU_Sensor : public Sensor{
   public:
   IMU_Sensor() : Sensor(){
     lsm = Adafruit_LSM9DS1();
-    
-    //lsm.setupAccel(lsm.LSM9DS1_ACCELRANGE_2G);
-    //lsm.setupMag(lsm.LSM9DS1_MAGGAIN_4GAUSS);
-    //lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_245DPS);
    }
 
   virtual void run();
   double getPitch();
   double getHeading();
+  void setupIMU();
 
   private:
-  double a_accel_x_, a_accel_y_, a_accel_z_, m_guass_x_, m_guass_y_;
+  double a_accel_x_, a_accel_y_, a_accel_z_, m_gauss_x_, m_gauss_y_;
   Adafruit_LSM9DS1 lsm;
 };
 

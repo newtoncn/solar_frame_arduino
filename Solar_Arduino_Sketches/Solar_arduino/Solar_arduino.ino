@@ -77,6 +77,9 @@ void setup() {
   azande.add(eventShowHeadingPosition);
   azande.add(eventShowCurrentAReading);
   azande.add(eventShowCurrentBReading);
+
+  //Setup IMU_sensor object(s) before running any reading functions
+  imu_sensor.setupIMU();
  
   // Add sensors to sensor_container, which allows for simultaneous update of all variables with sensor readings
   sensor_container.addSensor(rotary_encoder);
@@ -92,7 +95,7 @@ void loop() {
   delay(20);
   
   azande.readStream(); // Let Azande handle the new data
-
+  
 }
 
 
