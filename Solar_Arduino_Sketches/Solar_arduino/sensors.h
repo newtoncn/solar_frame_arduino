@@ -27,7 +27,8 @@ class Sensor{
   public:
   Sensor(){}
   
-  virtual void run()=0; // "run()" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
+  virtual void run(); // "run()" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
+  double getAngle();
 };
 
 /*
@@ -58,7 +59,7 @@ class IMU_Sensor : public Sensor{
    }
 
   virtual void run();
-  double getPitch();
+  double getAngle();
   double getHeading();
   void setupIMU();
 
@@ -82,7 +83,7 @@ class Rotary_Encoder : public Sensor {
    }
     virtual void run();
     void startTracking();
-    double getCurrentAngle();
+    double getAngle();
     
   private:
     int pin0_,pin1_,pin2_,pin3_,prev_gray_,current_gray_,counter_,num_,val0_,val1_,val2_,val3_;

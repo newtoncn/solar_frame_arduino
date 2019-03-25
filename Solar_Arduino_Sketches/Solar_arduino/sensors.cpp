@@ -66,7 +66,7 @@ void Rotary_Encoder::startTracking()
  * requires: nothing
  * effects:  counter_
  */
-double Rotary_Encoder::getCurrentAngle()
+double Rotary_Encoder::getAngle()
 {
   return counter_ * (360.0 / 16.0) * (1.0 / GEAR_RATIO);
 }
@@ -138,7 +138,7 @@ void IMU_Sensor::setupIMU()
  * requires: nothing
  * effects:  nothing, converts and returns IMU sensor pitch readings
  */
-double IMU_Sensor::getPitch()
+double IMU_Sensor::getAngle()
 {
   return atan2(-a_accel_x_, sqrt(a_accel_y_*a_accel_y_ + a_accel_z_*(a_accel_z_))) * 180/M_PI;
 }
@@ -184,3 +184,11 @@ void Sensor_Container::run()
       }
   }
 }
+
+
+/*
+ * These functions are always overridden. Made so that multiple Sensor subclassses can be passed as an argument,
+ * These functions are never called, no value is never returned. Require and effect nothing.
+ */
+double Sensor::getAngle(){ return 0.0; };            
+void Sensor::run() { }

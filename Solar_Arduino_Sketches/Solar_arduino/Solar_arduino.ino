@@ -13,13 +13,13 @@
 Azande azande;
 
 // Azande Feature Macros for Sensor Readings
-define_double_event(    eventShowRotaryPosition,  "Azimuth Position",                     0, "°", , , );
-define_double_event(    eventShowPitchPosition,   "Pitch Position",                       0, "°", , , );
-define_double_event(    eventShowHeadingPosition, "Heading Position",                     0, "°", , , );
-define_double_event(    eventShowCurrentAReading, "Current Position A",                   0, "A"   , , , );
-define_double_event(    eventShowCurrentBReading, "Current Position B",                   0, "A"   , , , );
-define_double_command(  cmdSetAzimuthAngle,       "Set Azimuthal Angle",     SetAzAngle,  1, "0°-359°", 0.0, 359.0);
-define_double_command(  cmdSetAltitudinalAngle,   "Set Altitudinalal Angle", SetAltAngle, 1, "15°-90°", 15.0, 90.0);
+define_double_event(    eventShowRotaryPosition,      "Azimuth Position",                           0, "°", , , );
+define_double_event(    eventShowPitchPosition,       "Pitch Position",                             0, "°", , , );
+define_double_event(    eventShowHeadingPosition,     "Heading Position",                           0, "°", , , );
+define_double_event(    eventShowCurrentAAltReading,  "Current Altitudinal (A)",                    0, "A"   , , , );
+define_double_event(    eventShowCurrentBAzReading,   "Current Azimuthal (B)",                      0, "A"   , , , );
+define_double_command(  cmdSetAzimuthAngle,           "Set Azimuthal Angle",     GetAndSetAzAngle,  1, "0°-359°", 0.0, 359.0);
+define_double_command(  cmdSetAltitudinalAngle,       "Set Altitudinalal Angle", GetAndSetAltAngle, 1, "15°-90°", 15.0, 90.0);
 
 // Pin Declarations, as per pinout sheet
 int re_pin0 = 3;  // Rotary encoder
@@ -30,16 +30,23 @@ int Megamoto_EnablePin = 8;
 int PWMPinA = 9;
 int PWMPinB = 10;
 int relayPin = 2;
-int currentSensorAPin = A5;
-int currentSensorBPin = A0;
+int currentSensorA_Alt_Pin = A5;
+int currentSensorB_Az_Pin = A0;
+int errorLight_Pin = 1;
+
+int maxCurrentAlt = 15;       // THESE 2 NUMBERS ARE GUESS; MUST TEST TO ASCERTAIN
+int maxCurrentAz = 10;        // THESE 2 NUMBERS ARE GUESS; MUST TEST TO ASCERTAIN
+int maxTimePassingThresholdCurrent = 3000;
+int timeForFullActuatorStop = 1000;
+int timeForBackup = 5000;
 
 // Sensor objects
 Sensor_Container sensor_container = Sensor_Container();
 
 Rotary_Encoder rotary_encoder = Rotary_Encoder(re_pin0,re_pin1,re_pin2,re_pin3);
 IMU_Sensor imu_sensor = IMU_Sensor();
-Current_Sensor current_sensor_A = Current_Sensor(currentSensorAPin);
-Current_Sensor current_sensor_B = Current_Sensor(currentSensorBPin);
+Current_Sensor current_sensor_A_Alt = Current_Sensor(currentSensorA_Alt_Pin);
+Current_Sensor current_sensor_B_Az = Current_Sensor(currentSensorB_Az_Pin);
 
 // Motor objects and related variables/parameters
 float azimuthal_speed = 155.0;  // Values from 0-255, range of motor speed from 0-100% 
@@ -47,7 +54,7 @@ float altitudinal_speed = 255.0;
 int azimuthal_relay_setting = LOW; 
 int altitudinal_relay_setting = HIGH; 
 Actuator azimuthal_actuator =   Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, azimuthal_speed,   relayPin, azimuthal_relay_setting);
-Actuator altidutinal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, altitudinal_speed, relayPin, altitudinal_relay_setting);
+Actuator altitudinal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, altitudinal_speed, relayPin, altitudinal_relay_setting);
 
 
 void setup() {
@@ -75,8 +82,8 @@ void setup() {
   azande.add(eventShowRotaryPosition);
   azande.add(eventShowPitchPosition);
   azande.add(eventShowHeadingPosition);
-  azande.add(eventShowCurrentAReading);
-  azande.add(eventShowCurrentBReading);
+  azande.add(eventShowCurrentAAltReading);
+  azande.add(eventShowCurrentBAzReading);
 
   //Setup IMU_sensor object(s) before running any reading functions
   imu_sensor.setupIMU();

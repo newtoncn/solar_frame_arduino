@@ -7,7 +7,6 @@
 
 #include <Arduino.h>
 #include <Azande.h>
-#include "sensors.h"
 
 /*
  * Class has 3 functions: move forward, backward, and stop.
@@ -26,7 +25,7 @@ class Actuator {
     int pin_PWM_A;
     int pin_PWM_B;
     int relayPin_;
-    int relaySetting_;  
+    int relaySetting_; 
     float speed_actuate; // Operation speed
     float speed_stop;    // Stop speed.
     int rampUpTime;
