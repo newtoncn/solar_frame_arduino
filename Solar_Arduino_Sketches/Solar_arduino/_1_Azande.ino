@@ -1,9 +1,7 @@
 /*
- * All functions sending data to or from Azande interface.
+ * This tab containts all functions, including those sending data to or from Azande interface.
  */
 
-int SentForAzMotor = 1;
-int SentForAltMotor = 0;
 
 /* 
  * Sends updated readouts (cmdGiveReading) for all sensors to Azande Studio.
@@ -15,21 +13,51 @@ void SendSensorReadout()
 { 
   sensor_container.run();
 
-    azande.send(eventShowRotaryPosition, rotary_encoder.getAngle()); 
-    azande.send(eventShowPitchPosition, imu_sensor.getAngle() ); 
-    azande.send(eventShowHeadingPosition, imu_sensor.getHeading());
-    azande.send(eventShowCurrentAAltReading, current_sensor_A_Alt.getCurrent() );
-    azande.send(eventShowCurrentBAzReading, current_sensor_B_Az.getCurrent() );
+    azande.send(eventShowRotaryPosition,      rotary_encoder.getAngle()); 
+    azande.send(eventShowPitchPosition,       imu_sensor.getAngle() ); 
+    azande.send(eventShowHeadingPosition,     imu_sensor.getHeading());
+    azande.send(eventShowCurrentAAltReading,  current_sensor_A_Alt.getCurrent() );
+    azande.send(eventShowCurrentBAzReading,   current_sensor_B_Az.getCurrent() );
 
 }
 
 /* 
  * requires: nothing
- * effects: Turns on error light and leaves program in long delay. 
+ * effects: Turns on error light, sends error message to Azande interface,  and leaves program in long delay. 
  */
-void errorOccurred(){
+void errorOccurred(char errorMessage[]){
   digitalWrite(errorLight_Pin, HIGH);
-  delay(99999999999); // infinite delay, until restart
+  while(true){
+    azande.send(eventErrorMsg, errorMessage); 
+    delay(10);
+  }
+}
+
+/* 
+ * This function executes the backoff algorithm.
+ * 
+ * requires: int motorSpecified_, Actuator actuator__, bool forwardActuationRequested_
+ * effects: makes actuator operate in reverse for time timeForBackUp
+ */
+void backoffRoutine(int motorSpecified_, Actuator actuator__, bool forwardActuationRequested_) {
+  //reverse actuator
+  if(forwardActuationRequested_){
+      actuator__.reverseActuator();
+      delay(timeForBackup);
+    } else{
+      actuator__.forwardActuator();
+      delay(timeForBackup);
+    }
+
+  //stop actuator
+  actuator__.stopActuator();
+
+  //send error message
+  if(motorSpecified_ == SentForAzMotor){   
+    errorOccurred(AzErrorMsg);
+  } else {  
+    errorOccurred(AltErrorMsg);
+  }
 }
 
 /*
@@ -40,7 +68,7 @@ void errorOccurred(){
  * effects: makes azimuthal actuator move until reached desired angle
  */
 void GetAndSetAzAngle(double azAngleRequest){
-  SetAnyAngle(SentForAzMotor, azAngleRequest, azimuthal_actuator, rotary_encoder, current_sensor_B_Az, maxCurrentAz);
+  SetAnyAngle(SentForAzMotor, azAngleRequest, azimuthal_actuator, current_sensor_B_Az, maxCurrentAz);
 }
 
 /* 
@@ -53,27 +81,29 @@ void GetAndSetAzAngle(double azAngleRequest){
  * effects: makes altitudinal actuator move until reached desired angle
  */
 void GetAndSetAltAngle(double altAngleRequest){
-  SetAnyAngle(SentForAltMotor, altAngleRequest, altitudinal_actuator, imu_sensor, current_sensor_A_Alt, maxCurrentAlt);
+  SetAnyAngle(SentForAltMotor, altAngleRequest, altitudinal_actuator, current_sensor_A_Alt, maxCurrentAlt);
 }
 
 /*
  * This is the function called only by functions GetAndSetAltAngle and GetAndSetAltAngle. See specs of those functions.
  */
-void SetAnyAngle(int motorSpecified, int targetAngle, Actuator actuator_, Sensor angle_sensor_, Current_Sensor currentSensor_, int maxCurrent){
-
+void SetAnyAngle(int motorSpecified, int targetAngle, Actuator actuator_, Current_Sensor currentSensor_, int maxCurrent){
+  sensor_container.run(); // Refresh sensor readings.
   bool backoff = false;
   bool forwardActuationRequested = false;
- 
+  double currentAngle = 0;
+
   int thresholdCurrent;     // Current at which array should not be operating, and back off and shutdown are initiated.
   if(motorSpecified == SentForAzMotor){
     thresholdCurrent = maxCurrentAz; 
+    currentAngle = rotary_encoder.getAngle();
   } else if(motorSpecified == SentForAltMotor){
     thresholdCurrent = maxCurrentAlt;
+    //currentAngle = imu_sensor.getAngle();
   }
   int timeOverThresholdCurrent = 0; // Set to 0 initially.
 
-  sensor_container.run(); // Refresh sensor readings.
-  if( targetAngle < angle_sensor_.getAngle() )
+  if( targetAngle < currentAngle )
   {
      actuator_.forwardActuator();  // Azimuthal actuator turns CCW, or linear actuator extends, until at target angle.
      forwardActuationRequested = true;
@@ -83,16 +113,14 @@ void SetAnyAngle(int motorSpecified, int targetAngle, Actuator actuator_, Sensor
 
   // ...until at target bearing
   int firstTimeThresholdCurrentSurpassed = 0;
-  while( abs(angle_sensor_.getAngle() - targetAngle) > 1 && backoff == false ){
+  while( backoff == false && abs(currentAngle - targetAngle) > 1 ){
+    //refresh sensor readings
     sensor_container.run();
-      
-    // Keep sending angle & current sensor readout until destination reached.
-    if(motorSpecified == SentForAzMotor){   
-      azande.send(eventShowRotaryPosition, angle_sensor_.getAngle());
-      azande.send(eventShowCurrentBAzReading, currentSensor_.getCurrent());
-    } else if(motorSpecified == SentForAltMotor){
-      azande.send(eventShowPitchPosition, angle_sensor_.getAngle());
-      azande.send(eventShowCurrentAAltReading, currentSensor_.getCurrent());
+    SendSensorReadout();
+    if(motorSpecified == SentForAzMotor){
+      currentAngle = rotary_encoder.getAngle();
+    } else { 
+      //currentAngle = imu_sensor.getAngle();
     }
 
     // Ensure backoff algorithm runs if current sensor is above threshold for too long.
@@ -101,25 +129,18 @@ void SetAnyAngle(int motorSpecified, int targetAngle, Actuator actuator_, Sensor
     } else if (currentSensor_.getCurrent() > maxCurrent && firstTimeThresholdCurrentSurpassed > maxTimePassingThresholdCurrent){
       backoff = true;
     }
-    
+
     delay(20);
   }
-  
+
+  //stop actuator once at target bearing, or current too high
   actuator_.stopActuator();
 
   // Delay to allow motor to fully stop.
   delay(timeForFullActuatorStop);
 
-  // backoff algorithm
+  // initiate backoff algorithm if movement terminated early in order to backoff
   if(backoff == true){
-    if(forwardActuationRequested){
-      actuator_.reverseActuator();
-      delay(timeForBackup);
-    } else{
-      actuator_.forwardActuator();
-      delay(timeForBackup);
-    }
-    errorOccurred();
+    backoffRoutine(motorSpecified, actuator_, forwardActuationRequested);
   }
-
 }

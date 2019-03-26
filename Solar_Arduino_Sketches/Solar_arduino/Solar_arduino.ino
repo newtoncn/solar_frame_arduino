@@ -20,6 +20,8 @@ define_double_event(    eventShowCurrentAAltReading,  "Current Altitudinal (A)",
 define_double_event(    eventShowCurrentBAzReading,   "Current Azimuthal (B)",                      0, "A"   , , , );
 define_double_command(  cmdSetAzimuthAngle,           "Set Azimuthal Angle",     GetAndSetAzAngle,  1, "0°-359°", 0.0, 359.0);
 define_double_command(  cmdSetAltitudinalAngle,       "Set Altitudinalal Angle", GetAndSetAltAngle, 1, "15°-90°", 15.0, 90.0);
+define_text_event(      eventErrorMsg,                "Error Message",                              2,  64);
+
 
 // Pin Declarations, as per pinout sheet
 int re_pin0 = 3;  // Rotary encoder
@@ -34,11 +36,16 @@ int currentSensorA_Alt_Pin = A5;
 int currentSensorB_Az_Pin = A0;
 int errorLight_Pin = 1;
 
+// Current and motor variables
 int maxCurrentAlt = 15;       // THESE 2 NUMBERS ARE GUESS; MUST TEST TO ASCERTAIN
 int maxCurrentAz = 10;        // THESE 2 NUMBERS ARE GUESS; MUST TEST TO ASCERTAIN
 int maxTimePassingThresholdCurrent = 3000;
 int timeForFullActuatorStop = 1000;
 int timeForBackup = 5000;
+char AzErrorMsg[] = "Azimuthal motor current over threshold";
+char AltErrorMsg[] = "Altitudinal motor current over threshold";
+int SentForAzMotor = 1;
+int SentForAltMotor = 0;
 
 // Sensor objects
 Sensor_Container sensor_container = Sensor_Container();
@@ -84,6 +91,7 @@ void setup() {
   azande.add(eventShowHeadingPosition);
   azande.add(eventShowCurrentAAltReading);
   azande.add(eventShowCurrentBAzReading);
+  azande.add(eventErrorMsg);
 
   //Setup IMU_sensor object(s) before running any reading functions
   imu_sensor.setupIMU();

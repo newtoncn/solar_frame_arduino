@@ -128,7 +128,7 @@ void IMU_Sensor::setupIMU()
       while (1);
    }
     
-    //Serial.println("Found LSM9DS1 9DOF");
+    Serial.println("Found LSM9DS1 9DOF");
     lsm.setupAccel(lsm.LSM9DS1_ACCELRANGE_2G);
     lsm.setupMag(lsm.LSM9DS1_MAGGAIN_4GAUSS);
     lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_245DPS);
@@ -184,11 +184,3 @@ void Sensor_Container::run()
       }
   }
 }
-
-
-/*
- * These functions are always overridden. Made so that multiple Sensor subclassses can be passed as an argument,
- * These functions are never called, no value is never returned. Require and effect nothing.
- */
-double Sensor::getAngle(){ return 0.0; };            
-void Sensor::run() { }

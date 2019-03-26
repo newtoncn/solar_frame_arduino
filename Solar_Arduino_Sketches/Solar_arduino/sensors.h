@@ -27,8 +27,7 @@ class Sensor{
   public:
   Sensor(){}
   
-  virtual void run(); // "run()" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
-  double getAngle();
+  virtual void run()=0; // "run()" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
 };
 
 /*
