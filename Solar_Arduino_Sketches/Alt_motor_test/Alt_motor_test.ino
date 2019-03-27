@@ -9,9 +9,12 @@
 Azande azande;
 
 // Azande Feature Macros for Motor test
-define_enum_command(   cmdSetAltitudinalAngle,      "Send Alt Motor Cmd", GiveAltCmd,  0,  define_enum_item(0, "Extend")\
-                                                                                           define_enum_item(1, "Retract")\
+define_enum_command(   cmdSetAltitudinalAngle, "Send Motor Cmd", GiveAltCmd,  0,  define_enum_item(0, "Extend or CW")\
+                                                                                           define_enum_item(1, "Retract or CCW")\
                                                                                            define_enum_item(2, "Stop"))
+define_double_command( cmdSetAltSpeed,         "Set Speed",      setAltSpeed, 0, "Range: 0-255", 0.0, 255.0);
+define_double_event(   eventShowAltSpeed,      "Speed",                       0, "Range: 0-255", , , );
+
 // Pin Declarations, as per pinout sheet
 int Megamoto_EnablePin = 8;
 int PWMPinA = 9;
@@ -40,10 +43,13 @@ void setup() {
   
   // Add features to be visible on Azande Studio
   azande.add(cmdSetAltitudinalAngle);
+  azande.add(cmdSetAltSpeed);
+  azande.add(eventShowAltSpeed);
 }
 
 
-void loop() {  
+void loop() {
+   azande.send(eventShowAltSpeed, altitudinal_speed );     
   delay(20); 
   azande.readStream(); // Let Azande handle the new data
 }

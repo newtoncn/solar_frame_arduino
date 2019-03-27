@@ -1,6 +1,12 @@
 /*
  * All functions getting cmds from Azande and sending commands to motor.
  */
+
+// This function takes Azande input and sets speed.
+void setAltSpeed(double speedOrder){
+  altitudinal_speed = speedOrder;
+}
+ 
 // This function is called when receiving the command "Give sensor read for:", (cmdGiveReading), from Azande Studio
 void GiveAltCmd(long enumValue)
 { 
