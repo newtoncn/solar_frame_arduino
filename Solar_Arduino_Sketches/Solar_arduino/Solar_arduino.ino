@@ -13,13 +13,15 @@
 Azande azande;
 
 // Azande Feature Macros for Sensor Readings
-define_double_event(    eventShowRotaryPosition,  "Azimuth Position",                     0, "°", , , );
-define_double_event(    eventShowPitchPosition,   "Pitch Position",                       0, "°", , , );
-define_double_event(    eventShowHeadingPosition, "Heading Position",                     0, "°", , , );
-define_double_event(    eventShowCurrentAReading, "Current Position A",                   0, "A"   , , , );
-define_double_event(    eventShowCurrentBReading, "Current Position B",                   0, "A"   , , , );
-define_double_command(  cmdSetAzimuthAngle,       "Set Azimuthal Angle",     SetAzAngle,  1, "0°-359°", 0.0, 359.0);
-define_double_command(  cmdSetAltitudinalAngle,   "Set Altitudinalal Angle", SetAltAngle, 1, "15°-90°", 15.0, 90.0);
+define_double_event(    eventShowRotaryPosition,      "Azimuth Position",                           0, "°", , , );
+define_double_event(    eventShowPitchPosition,       "Pitch Position",                             0, "°", , , );
+define_double_event(    eventShowHeadingPosition,     "Heading Position",                           0, "°", , , );
+define_double_event(    eventShowCurrentA_Alt_Reading,  "Current Altitudinal (A)",                    0, "A"   , , , );
+define_double_event(    eventShowCurrentB_Az_Reading,   "Current Azimuthal (B)",                      0, "A"   , , , );
+define_double_command(  cmdSetAzimuthAngle,           "Set Azimuthal Angle",     SetAzAngle,  1, "0°-359°", 0.0, 359.0);
+define_double_command(  cmdSetAltitudinalAngle,       "Set Altitudinalal Angle", SetAltAngle, 1, "15°-90°", 15.0, 90.0);
+define_text_event(      eventErrorMsg,                "Error Message",                              2,  64);
+define_text_event(      eventStatusMsg,               "Current Status",                              2,  64);
 
 // Pin Declarations, as per pinout sheet
 int re_pin0 = 3;  // Rotary encoder
@@ -32,6 +34,7 @@ int PWMPinB = 10;
 int relayPin = 2;
 int currentSensorAPin = A5;
 int currentSensorBPin = A0;
+int errorLight_Pin = 1;
 
 // Sensor objects
 Sensor_Container sensor_container = Sensor_Container();
@@ -75,8 +78,10 @@ void setup() {
   azande.add(eventShowRotaryPosition);
   azande.add(eventShowPitchPosition);
   azande.add(eventShowHeadingPosition);
-  azande.add(eventShowCurrentAReading);
-  azande.add(eventShowCurrentBReading);
+  azande.add(eventShowCurrentA_Alt_Reading);
+  azande.add(eventShowCurrentB_Az_Reading);
+  azande.add(eventErrorMsg);
+  azande.add(eventStatusMsg);
 
   //Setup IMU_sensor object(s) before running any reading functions
   imu_sensor.setupIMU();
@@ -92,6 +97,9 @@ void loop() {
   
   SendSensorReadout();
   
+  // Initialize first messages to user
+  azande.send(eventErrorMsg, "No errors");
+  azande.send(eventStatusMsg, "Awaiting Command");
   delay(20);
   
   azande.readStream(); // Let Azande handle the new data
