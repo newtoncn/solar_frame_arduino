@@ -1,12 +1,3 @@
-/* To do: 
- * Test what can (see what can get out of azande)
- * Make test suite
- * determine current readings, determine which current sensor will be used (or both)
- * consider more/less displays
- * Implement bluetooth
- * porential: Could make superclass with fxn .getAngle() for sensors so could pass either as argument into SetAngle()
- */
-
 /*
  * Arduino Uno microcontroller code, interfacing with Azande software, connected to a 
  * laptop via serial or Bluetooth. It runs 2 motors, altitudinal and azimuthal. It has

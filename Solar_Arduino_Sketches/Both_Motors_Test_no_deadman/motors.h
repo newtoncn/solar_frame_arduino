@@ -17,9 +17,10 @@ class Actuator {
   public:
     Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting, int relayPin, int pin_relaySetting);
     ~Actuator();
-    void forwardActuator();   // Moves actuator forward.
-    void reverseActuator();   // Moves actuator backward.
-    void stopActuator();      // Stops actuator.
+    void forwardActuator();       // Moves actuator forward.
+    void reverseActuator();       // Moves actuator backward.
+    void stopActuator();          // Stops actuator.
+    void speedSet(int speedOrder);// Sets/changes actuator speed.
   private:
     int pin_enable;
     int pin_PWM_A;

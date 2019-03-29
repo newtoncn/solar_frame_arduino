@@ -65,7 +65,6 @@ void Actuator::reverseActuator() {
 void Actuator::forwardActuator() {
   digitalWrite(relayPin_, relaySetting_);
   digitalWrite(pin_enable, HIGH);
-  digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_B, speed_stop);
     // Ramp up time to get to full speed
   for (float i = 0.2; i <= 1; i += 0.2) {
@@ -73,4 +72,15 @@ void Actuator::forwardActuator() {
     delay(125);
   }
 }
+
+/*
+ * Sets actuator speed.
+ * 
+ * requires: int speedOrder which is desired speed
+ * effects:  int speed_actuate which is variable containing speed of actuator
+ */
+void Actuator::speedSet(int speedOrder){
+  speed_actuate = speedOrder;
+}
+
 

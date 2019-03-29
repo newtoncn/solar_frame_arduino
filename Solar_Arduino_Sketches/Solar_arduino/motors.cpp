@@ -65,7 +65,6 @@ void Actuator::reverseActuator() {
 void Actuator::forwardActuator() {
   digitalWrite(relayPin_, relaySetting_);
   digitalWrite(pin_enable, HIGH);
-  digitalWrite(pin_enable, HIGH);
   analogWrite(pin_PWM_B, speed_stop);
     // Ramp up time to get to full speed
   for (float i = 0.2; i <= 1; i += 0.2) {
