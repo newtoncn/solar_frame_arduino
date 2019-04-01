@@ -15,12 +15,15 @@
  */
 class Actuator {
   public:
-    Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, float speedSetting, int relayPin, int pin_relaySetting);
+    Actuator(int Megamoto_EnablePin, int PWMPinA, int PWMPinB, int relayPin, int pin_relaySetting);
     ~Actuator();
     void forwardActuator();       // Moves actuator forward.
     void reverseActuator();       // Moves actuator backward.
     void stopActuator();          // Stops actuator.
     void speedSet(int speedOrder);// Sets/changes actuator speed.
+    float getSpeed();             // Returns speed
+    float getSpeedAsPercentage(); // Returns speed as percentage
+    int getRelaySetting();        // Get pin setting as identifier
   private:
     int pin_enable;
     int pin_PWM_A;

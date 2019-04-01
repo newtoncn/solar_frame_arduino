@@ -1,75 +1,35 @@
 /*
- * All functions getting cmds from Azande and sending commands to motor.
+ * Functions sending data to Azande GUI, including sensor data.
  */
-
-// This function takes Azande input and sets altitudinal speed.
-void setAltSpeed(double speedOrder){
-  altidutinal_actuator.speedSet(speedOrder);
-}
-
-// This function takes Azande input and sets azimuthal speed.
-void setAzSpeed(double speedOrder){
-  azimuthal_actuator.speedSet(speedOrder);
-}
  
-// This function is called when receiving the command "Give sensor read for:", (cmdGiveReading), from Azande Studio
-void GiveAltCmd(long enumValue)
-{ 
-//  sensor_container.run();
-  switch (enumValue)
-  {
-    case 0: // Extend
-      ExtendOrCW(altidutinal_actuator);
-      break;
+ /*
+ * Sends data to Azande GUI
+ * 
+ * requires: nothing
+ * effects:  readable output on Azande GUI
+ */
+ void SendDataToGUI()
+ {
+  azande.send(eventShowAzSpeed,   (int) azimuthal_actuator.getSpeedAsPercentage() );     
+  azande.send(eventShowAltSpeed,  (int) altidutinal_actuator.getSpeedAsPercentage() );
+  current_sensor.readCurrent();
+  azande.send(eventSendCurrent,  current_sensor.getCurrent() );
+  SendMsgToGUI("Waiting4Cmd", current_status);
+ }
 
-    case 1: // Retract
-      RetractOrCCW(altidutinal_actuator);
-      break;
+ /* 
+ * requires:  String statusMessage, length maxiumum 64
+ * effects:   Sends status message to Azande interface. 
+ */
+void SendMsgToGUI(String message, int message_type){
+  // convert String to char[], as required by Azande
+  int message_len = message.length() + 1; 
+  char messageChar[message_len];
+  message.toCharArray(messageChar, message_len);
 
-    case 2: // Stop
-      Stop(altidutinal_actuator);
-      break;
-
-    default:
-      break;
+  if(message_type == current_status){
+    azande.send(eventSendStatusToGUI, messageChar);    
+  } else if (message_type == last_cmd_sent){
+    azande.send(eventSendLastCmdToGUI, messageChar);  
   }
-}
-
-// This function is called when receiving the command "Give sensor read for:", (cmdGiveReading), from Azande Studio
-void GiveAzCmd(long enumValue)
-{ 
-//  sensor_container.run();
-  switch (enumValue)
-  {
-    case 0: // CW
-      ExtendOrCW(azimuthal_actuator);
-      break;
-
-    case 1: // CCW
-      RetractOrCCW(azimuthal_actuator);
-      break;
-
-    case 2: // Stop
-      Stop(azimuthal_actuator);
-      break;
-
-    default:
-      break;
-  }
-}
-
-// Any of following functions may be run each time GiveReading function is run
-void ExtendOrCW(Actuator act)
-{
-    act.forwardActuator();
-}
-
-void RetractOrCCW(Actuator act)
-{
-    act.reverseActuator();
-}
-
-void Stop(Actuator act)
-{
-    act.stopActuator();
 }

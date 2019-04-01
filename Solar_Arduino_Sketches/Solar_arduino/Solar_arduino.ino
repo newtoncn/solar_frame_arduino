@@ -65,6 +65,7 @@ void setup() {
   pinMode(re_pin1, INPUT);
   pinMode(re_pin2, INPUT);
   pinMode(re_pin3, INPUT);
+  pinMode(relayPin, OUTPUT); 
   pinMode(Megamoto_EnablePin, OUTPUT);    // Enable Megamoto
   pinMode(PWMPinA, OUTPUT);               // Set motor outputs
   pinMode(PWMPinB, OUTPUT);               
