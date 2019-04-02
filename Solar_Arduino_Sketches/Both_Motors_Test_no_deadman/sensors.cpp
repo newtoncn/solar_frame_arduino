@@ -12,7 +12,14 @@
 double Current_Sensor::getCurrent() 
 {
   float send_value = analogReading_*convertVoltsToAmps; //Current sense output: I = Vc/0.075, where Vc ranges 0 to 2.99V.
-  return send_value;
+  float zeroCurrentComparitor = 0.01; // If current is below this value, there is no current.
+  float zero = 0.0;   // Value to return if current is 0. Else value return is long, small decimal.
+  
+  if(send_value<zeroCurrentComparitor){ 
+    return zero;
+  } else {
+    return send_value;
+  }
 }
 
 /*

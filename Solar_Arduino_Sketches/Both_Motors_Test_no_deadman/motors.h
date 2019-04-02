@@ -33,6 +33,12 @@ class Actuator {
     float speed_actuate; // Operation speed
     float speed_stop;    // Stop speed.
     int rampUpTime;
+
+    // CHANGE THIS re: enum
+    int state;
+    int stop_ = 0;
+    int forward_ = 1;
+    int reverse_ = 2;
 };
 
 

@@ -12,7 +12,7 @@ void setAltSpeed(double speedOrder)
 {
   float conversion_factor_percent_to_255 = 255.0/100.0;
   float speedOrderIn255 = speedOrder*conversion_factor_percent_to_255;
-  altidutinal_actuator.speedSet(speedOrderIn255);
+  altitudinal_actuator.speedSet(speedOrderIn255);
 }
 
  /*
@@ -37,7 +37,8 @@ void setAzSpeed(double speedOrder)
  */
 void GiveAltCmd(long enumValue)
 {
-   TakeAzOrAltCmdAndActuate(enumValue, altidutinal_actuator);
+   altOrAz = alt; // CHANGE THIS 
+   TakeAzOrAltCmdAndActuate(enumValue, altitudinal_actuator);
 }
 
  /*
@@ -49,6 +50,7 @@ void GiveAltCmd(long enumValue)
  */
 void GiveAzCmd(long enumValue)
 { 
+  altOrAz = az; // CHANGE THIS
   TakeAzOrAltCmdAndActuate(enumValue, azimuthal_actuator);
 }
 

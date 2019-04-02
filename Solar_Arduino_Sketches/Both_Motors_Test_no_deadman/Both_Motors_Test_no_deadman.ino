@@ -6,18 +6,24 @@
 #include "motors.h"
 #include "sensors.h"
 
+// CHANGE THIS
+int altOrAz = -1;
+int alt = 0;
+int az = 1;
+
+
 // The Azande object variable. 'Serial' is default used 'Stream'.
 Azande azande;
 
 // Azande Feature Macros for Motor test
-define_enum_command(   cmdSetAltitudinalAngle,"Send Alt Motor Cmd", GiveAltCmd,  0, define_enum_item(0, "Extend or CW")\
-                                                                                    define_enum_item(1, "Retract or CCW")\
-                                                                                    define_enum_item(2, "Stop"))
+define_enum_command(   cmdSetAltitudinalAngle,"Send Alt Motor Cmd", GiveAltCmd,   0, define_enum_item(0, "Extend")\
+                                                                                     define_enum_item(1, "Retract")\
+                                                                                     define_enum_item(2, "Stop"))
 define_double_command( cmdSetAltSpeed,        "Set Alt Speed:",      setAltSpeed, 0, "0-100 [%]", 0, 100);
 define_double_event(   eventShowAltSpeed,     "Alt Speed:",                       0, "[%]", , , );
 define_enum_command(   cmdSetAzimuthalAngle,  "Send Az Motor Cmd:",  GiveAzCmd,   1, define_enum_item(0, "Clockwise")\
-                                                                                    define_enum_item(1, "Counterclockwise")\
-                                                                                    define_enum_item(2, "Stop"))
+                                                                                    define_enum_item(1,  "Counterclockwise")\
+                                                                                    define_enum_item(2,  "Stop"))
 define_double_command( cmdSetAzSpeed,         "Set Az Speed:",       setAzSpeed,  1, "0-100 [%]", 0, 100);
 define_double_event(   eventShowAzSpeed,      "Az Speed:",                        1, "[%]", , , );
 define_text_event(     eventSendStatusToGUI,  "Status:",                          3, 64);
@@ -35,7 +41,7 @@ const int relayPin = 2;
 // Motor objects and related variables/parameters
 const int altitudinal_relay_setting = HIGH; 
 const int azimuthal_relay_setting = LOW; 
-Actuator altidutinal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, relayPin, altitudinal_relay_setting);
+Actuator altitudinal_actuator = Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, relayPin, altitudinal_relay_setting);
 Actuator azimuthal_actuator =   Actuator(Megamoto_EnablePin, PWMPinA, PWMPinB, relayPin, azimuthal_relay_setting);
 
 // Sensor objects and variables/parameters
@@ -69,13 +75,16 @@ void setup() {
   azande.add(eventSendCurrent);
   azande.add(eventSendStatusToGUI);
   azande.add(eventSendLastCmdToGUI);
+
+  InitializeCurrentArray();  // initialize array with all 0.0's, so staring average is zero
 }
 
 
 void loop() {
   SendDataToGUI();    
+  AddValueToCurrentArray(current_sensor.getCurrent());
+  EnsureCurrentSafety();
+
   delay(20); 
   azande.readStream(); // Let Azande handle the new data
 }
-
-

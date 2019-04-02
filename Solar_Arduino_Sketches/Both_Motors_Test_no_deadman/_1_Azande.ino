@@ -11,11 +11,12 @@
  void SendDataToGUI()
  {
   azande.send(eventShowAzSpeed,   (int) azimuthal_actuator.getSpeedAsPercentage() );     
-  azande.send(eventShowAltSpeed,  (int) altidutinal_actuator.getSpeedAsPercentage() );
+  azande.send(eventShowAltSpeed,  (int) altitudinal_actuator.getSpeedAsPercentage() );
   current_sensor.readCurrent();
   azande.send(eventSendCurrent,  current_sensor.getCurrent() );
   SendMsgToGUI("Waiting4Cmd", current_status);
  }
+
 
  /* 
  * requires:  String statusMessage, length maxiumum 64
