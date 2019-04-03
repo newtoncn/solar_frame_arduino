@@ -78,7 +78,7 @@ class Rotary_Encoder : public Sensor {
         pin2_ = pin2;
         pin3_ = pin3;
         prev_gray_ = -1;
-       current_gray_ = 0;
+        current_gray_ = 0;
    }
     virtual void run();
     void startTracking();
