@@ -1,9 +1,12 @@
+/*
+  motors.h - Library for sensors code.
+*/
+
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_LSM9DS1.h>
 #include <Adafruit_Sensor.h>  // not used in this demo but required!
-
 
 #ifndef SENSORS_H
 #define SENSORS_H
@@ -14,20 +17,22 @@
 #define LSM9DS1_XGCS 6
 #define LSM9DS1_MCS 5
 
-#define GEAR_RATIO 60
+#define GEAR_RATIO 60.0
 
 /*
- * Interface that all of our sensors should adhere to.
+ * Superclass that all of our sensors should adhere to.
  * When we call run() sensor class should gather data.
  */
 class Sensor{
   public:
   Sensor(){}
   
-  virtual void run()=0; // "run(" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
+  virtual void run()=0; // "run()" is premade function, so cannot be implemented during class implementation. "virtual void" allows this lack of implementation.
 };
 
-
+/*
+ * Current Sensor Class. Gets and returns converted current sensor readings.
+ */
 class Current_Sensor : public Sensor {
   public: 
     Current_Sensor(int pinNum) : Sensor(){
@@ -38,35 +43,32 @@ class Current_Sensor : public Sensor {
     
   private:
     int pinNum_;
-    double convertVoltsToAmps = 0.075; //Current sense output: I*0.075 = Vc, where Vc ranges 0 to 2.99V.
-    double convertIntToVolts = 5.0/1023.0; // analogRead reads 0 to 5V, as from 0 to 1023
-    int analogReading_;
+    float convertVoltsToAmps = 0.075;     // Current sense output: I*0.075 = Vc, where Vc ranges 0 to 2.99V.
+    float convertanalogReadToVolts = 5.0/1023.0; // analogRead reads 0 to 5V, as from 0 to 1023
+    float analogReading_;
 };
 
 /*
- * IMU Sensor Class
+ * IMU Sensor Class. Gets and sends pitch and heading readings.
  */
 class IMU_Sensor : public Sensor{
   public:
   IMU_Sensor() : Sensor(){
     lsm = Adafruit_LSM9DS1();
-    
-    lsm.setupAccel(lsm.LSM9DS1_ACCELRANGE_2G);
-    lsm.setupMag(lsm.LSM9DS1_MAGGAIN_4GAUSS);
-    lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_245DPS);
    }
 
   virtual void run();
   double getPitch();
   double getHeading();
+  void setupIMU();
 
   private:
-  double a_accel_x_, a_accel_y_, a_accel_z_, m_guass_x_, m_guass_y_;
+  double a_accel_x_, a_accel_y_, a_accel_z_, m_gauss_x_, m_gauss_y_;
   Adafruit_LSM9DS1 lsm;
 };
 
 /*
- * Rotary Encoder Sensor class
+ * Rotary Encoder Sensor class. Gets and sends azimuthal sensor readings.
  */
 class Rotary_Encoder : public Sensor {
   public:
